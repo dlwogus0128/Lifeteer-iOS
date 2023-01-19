@@ -13,11 +13,16 @@
 		A3531E0929792A1C0089F2F5 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E0829792A1C0089F2F5 /* Pretendard-Bold.otf */; };
 		A3531E0B2979351E0089F2F5 /* ColorLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E0A2979351E0089F2F5 /* ColorLiterals.swift */; };
 		A3531E0D29793A380089F2F5 /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E0C29793A380089F2F5 /* ImageLiterals.swift */; };
+		A3531E1129793C900089F2F5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E1029793C900089F2F5 /* TabBarController.swift */; };
+		A3531E1329794D7B0089F2F5 /* MindSetHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E1229794D7B0089F2F5 /* MindSetHomeVC.swift */; };
+		A3531E1529794D8E0089F2F5 /* RecordedWillMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E1429794D8E0089F2F5 /* RecordedWillMainVC.swift */; };
+		A3531E1729794DBE0089F2F5 /* LetterMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E1629794DBE0089F2F5 /* LetterMainVC.swift */; };
+		A3531E1929794DCE0089F2F5 /* BucketListMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E1829794DCE0089F2F5 /* BucketListMainVC.swift */; };
+		A3531E1B29794DDE0089F2F5 /* DiaryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E1A29794DDE0089F2F5 /* DiaryMainVC.swift */; };
+		A3531E1E297950740089F2F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F71021297905FC00705FBF /* LaunchScreen.storyboard */; };
 		A3F71017297905FB00705FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F71016297905FB00705FBF /* AppDelegate.swift */; };
 		A3F71019297905FB00705FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F71018297905FB00705FBF /* SceneDelegate.swift */; };
-		A3F7101B297905FB00705FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7101A297905FB00705FBF /* ViewController.swift */; };
 		A3F71020297905FC00705FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F7101F297905FC00705FBF /* Assets.xcassets */; };
-		A3F71023297905FC00705FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F71021297905FC00705FBF /* LaunchScreen.storyboard */; };
 		A3F7102C2979062F00705FBF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A3F7102B2979062F00705FBF /* Moya */; };
 		A3F7102F2979063600705FBF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A3F7102E2979063600705FBF /* Kingfisher */; };
 		A3F710322979063F00705FBF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A3F710312979063F00705FBF /* SnapKit */; };
@@ -72,10 +77,15 @@
 		A3531E0829792A1C0089F2F5 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		A3531E0A2979351E0089F2F5 /* ColorLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiterals.swift; sourceTree = "<group>"; };
 		A3531E0C29793A380089F2F5 /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
+		A3531E1029793C900089F2F5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A3531E1229794D7B0089F2F5 /* MindSetHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSetHomeVC.swift; sourceTree = "<group>"; };
+		A3531E1429794D8E0089F2F5 /* RecordedWillMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedWillMainVC.swift; sourceTree = "<group>"; };
+		A3531E1629794DBE0089F2F5 /* LetterMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterMainVC.swift; sourceTree = "<group>"; };
+		A3531E1829794DCE0089F2F5 /* BucketListMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListMainVC.swift; sourceTree = "<group>"; };
+		A3531E1A29794DDE0089F2F5 /* DiaryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainVC.swift; sourceTree = "<group>"; };
 		A3F71013297905FB00705FBF /* Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F71016297905FB00705FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3F71018297905FB00705FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A3F7101A297905FB00705FBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3F7101F297905FC00705FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F71022297905FC00705FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3F71024297905FC00705FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,7 +170,6 @@
 				A3F7103E2979070800705FBF /* Global */,
 				A3F7103D2979070400705FBF /* Network */,
 				A3F7103C297906FE00705FBF /* Presentation */,
-				A3F7101A297905FB00705FBF /* ViewController.swift */,
 				A3F71024297905FC00705FBF /* Info.plist */,
 			);
 			path = "Lifeteer-iOS";
@@ -371,6 +380,7 @@
 		A3F710502979078A00705FBF /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				A3531E1029793C900089F2F5 /* TabBarController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -439,6 +449,7 @@
 		A3F710592979098600705FBF /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A3531E1629794DBE0089F2F5 /* LetterMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -453,6 +464,7 @@
 		A3F7105C2979099800705FBF /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A3531E1429794D8E0089F2F5 /* RecordedWillMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -467,6 +479,7 @@
 		A3F7105E297909A200705FBF /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A3531E1229794D7B0089F2F5 /* MindSetHomeVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -481,6 +494,7 @@
 		A3F71061297909AF00705FBF /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A3531E1829794DCE0089F2F5 /* BucketListMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -495,6 +509,7 @@
 		A3F71063297909B400705FBF /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A3531E1A29794DDE0089F2F5 /* DiaryMainVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -649,8 +664,8 @@
 				A3F710DD29790BFD00705FBF /* .swiftlint.yml in Resources */,
 				A3531E0929792A1C0089F2F5 /* Pretendard-Bold.otf in Resources */,
 				A3531E052979281B0089F2F5 /* Pretendard-Medium.otf in Resources */,
+				A3531E1E297950740089F2F5 /* LaunchScreen.storyboard in Resources */,
 				A3531E032979280B0089F2F5 /* Pretendard-Regular.otf in Resources */,
-				A3F71023297905FC00705FBF /* LaunchScreen.storyboard in Resources */,
 				A3F71020297905FC00705FBF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,16 +703,18 @@
 				A3F710CE29790B3800705FBF /* calculateStatusBarHeight.swift in Sources */,
 				A3F710C929790B3800705FBF /* UserDefaultWrapper.swift in Sources */,
 				A3F710B529790B1D00705FBF /* Publisher+Driver.swift in Sources */,
-				A3F7101B297905FB00705FBF /* ViewController.swift in Sources */,
 				A3531E0D29793A380089F2F5 /* ImageLiterals.swift in Sources */,
 				A3F710D529790B3800705FBF /* getClassName.swift in Sources */,
 				A3531E0B2979351E0089F2F5 /* ColorLiterals.swift in Sources */,
 				A3F710DA29790B3800705FBF /* setStatusBarBackgroundColor.swift in Sources */,
 				A3F710A729790B0100705FBF /* UISwitch+.swift in Sources */,
+				A3531E1929794DCE0089F2F5 /* BucketListMainVC.swift in Sources */,
 				A3F710A229790B0100705FBF /* UIDevice+.swift in Sources */,
 				A3F710D729790B3800705FBF /* calculatePastTime.swift in Sources */,
 				A3F7109F29790B0100705FBF /* UIButton+.swift in Sources */,
 				A3F710A029790B0100705FBF /* UIViewController+.swift in Sources */,
+				A3531E1129793C900089F2F5 /* TabBarController.swift in Sources */,
+				A3531E1B29794DDE0089F2F5 /* DiaryMainVC.swift in Sources */,
 				A3F710D229790B3800705FBF /* calculateTopInset.swift in Sources */,
 				A3F710CB29790B3800705FBF /* setRootViewController.swift in Sources */,
 				A3531E07297928D30089F2F5 /* FontLiterals.swift in Sources */,
@@ -711,6 +728,8 @@
 				A3F71019297905FB00705FBF /* SceneDelegate.swift in Sources */,
 				A3F710AE29790B1200705FBF /* String+.swift in Sources */,
 				A3F710AD29790B1200705FBF /* URL+.swift in Sources */,
+				A3531E1529794D8E0089F2F5 /* RecordedWillMainVC.swift in Sources */,
+				A3531E1329794D7B0089F2F5 /* MindSetHomeVC.swift in Sources */,
 				A3F710A529790B0100705FBF /* UITextView+.swift in Sources */,
 				A3F710CC29790B3800705FBF /* makeAlert.swift in Sources */,
 				A3F710CA29790B3800705FBF /* adjusted+.swift in Sources */,
@@ -720,6 +739,7 @@
 				A3F710D329790B3800705FBF /* addToolBar.swift in Sources */,
 				A3F710AF29790B1200705FBF /* Encodable+.swift in Sources */,
 				A3F7109E29790B0100705FBF /* UITableView+.swift in Sources */,
+				A3531E1729794DBE0089F2F5 /* LetterMainVC.swift in Sources */,
 				A3F710CD29790B3800705FBF /* LoadingIndicator.swift in Sources */,
 				A3F710A329790B0100705FBF /* UILabel+.swift in Sources */,
 				A3F710D829790B3800705FBF /* setImage.swift in Sources */,
@@ -870,9 +890,10 @@
 				INFOPLIST_FILE = "Lifeteer-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -898,9 +919,10 @@
 				INFOPLIST_FILE = "Lifeteer-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
