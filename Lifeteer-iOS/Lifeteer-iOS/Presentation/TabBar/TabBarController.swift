@@ -61,7 +61,7 @@ extension TabBarController {
         viewControllers = [letterMainNVC, recordedWillMainNVC, mindSetHomeNVC, bucketListMainNVC, diaryMainNVC]
     }
     
-    // Add tabbar item indicator upper line
+    /// Add tabbar item indicator upper line
     private func addTabBarIndicatorView(index: Int, isFirstTime: Bool = false) {
         guard let tabView = tabBar.items?[index].value(forKey: "view") as? UIView else { return }
         if !isFirstTime {

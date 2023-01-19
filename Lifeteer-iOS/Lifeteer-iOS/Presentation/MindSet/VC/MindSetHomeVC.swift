@@ -15,6 +15,7 @@ final class MindSetHomeVC: UIViewController {
     // MARK: - UI Components
     
     private lazy var navibar = CustomNavigationBar(self, type: .menuButtonWithBI)
+    private let button = CustomButton(title: "에", type: .fillWithGreen).setEnabled(false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,12 @@ extension MindSetHomeVC {
     }
     
     private func setLayout() {
+        view.addSubviews(button)
         
+        button.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.equalTo(335)
+            make.height.equalTo(48)
+        }
     }
 }

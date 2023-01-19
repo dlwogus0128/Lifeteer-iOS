@@ -14,7 +14,6 @@ class RecordedWillMainVC: UIViewController {
         view.backgroundColor = .mainBackground
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
