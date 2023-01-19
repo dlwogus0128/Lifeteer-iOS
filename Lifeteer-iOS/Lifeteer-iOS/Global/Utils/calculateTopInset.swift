@@ -51,4 +51,3 @@ public extension UIDevice {
         UIScreen.main.bounds.height > 736 ? true : false
     }
 }
-

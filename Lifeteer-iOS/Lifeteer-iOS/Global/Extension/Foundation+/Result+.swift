@@ -24,4 +24,3 @@ extension Result {
         return self
     }
 }
-

@@ -49,4 +49,3 @@ class XibView: UIView {
         addSubviewFromNib(view: self)
     }
 }
-

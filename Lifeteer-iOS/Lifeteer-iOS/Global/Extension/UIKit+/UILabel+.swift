@@ -138,4 +138,3 @@ extension UILabel {
         return layoutManager.boundingRect(forGlyphRange: glyphRange, in: textContainer)
     }
 }
-

@@ -25,4 +25,3 @@ public extension Publisher {
         return Empty().eraseToAnyPublisher()
     }
 }
-

@@ -10,7 +10,7 @@ included:
   - Lifeteer-iOS
 excluded:
   # AppDelegate, SceneDelegate file 무시
-  - Runnect-iOS/Global/Supports/AppDelegate.swift
-  - Runnect-iOS/Global/Supports/SceneDelegate.swift
+  - Lifeteer-iOS/Global/Supports/AppDelegate.swift
+  - Lifeteer-iOS/Global/Supports/SceneDelegate.swift
 
 force_cast: warning

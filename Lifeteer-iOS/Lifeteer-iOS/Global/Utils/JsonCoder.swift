@@ -25,4 +25,3 @@ public enum Json {
     
     public static let decoder = JSONDecoder()
 }
-

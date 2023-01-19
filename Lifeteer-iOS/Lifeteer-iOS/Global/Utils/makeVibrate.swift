@@ -35,4 +35,3 @@ public extension UIView {
         generator.impactOccurred()
     }
 }
-

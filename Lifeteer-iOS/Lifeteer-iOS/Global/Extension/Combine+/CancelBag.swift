@@ -23,4 +23,3 @@ extension AnyCancellable {
         cancelBag.subscriptions.insert(self)
     }
 }
-
