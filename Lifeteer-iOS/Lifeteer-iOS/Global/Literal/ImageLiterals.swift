@@ -9,14 +9,23 @@ import UIKit
 
 enum ImageLiterals {
     // icon
+    static var icAlertCircle: UIImage { .load(named: "ic_alert_circle") }
     static var icBack: UIImage { .load(named: "ic_back") }
     static var icBucketListFill: UIImage { .load(named: "ic_bucket_list_fill") }
     static var icBucketList: UIImage { .load(named: "ic_bucket_list") }
     static var icCheck: UIImage { .load(named: "ic_check") }
+    static var icDiaryFeedFill: UIImage { .load(named: "ic_diary_feed_fill") }
+    static var icDiaryFeed: UIImage { .load(named: "ic_diary_feed") }
     static var icDiaryFill: UIImage { .load(named: "ic_diary_fill") }
+    static var icDiaryListFill: UIImage { .load(named: "ic_diary_list_fill") }
+    static var icDiaryList: UIImage { .load(named: "ic_diary_list") }
     static var icDiary: UIImage { .load(named: "ic_diary") }
+    static var icEmotionScroller: UIImage { .load(named: "ic_emotion_scroller") }
     static var icHealthFill: UIImage { .load(named: "ic_health_fill") }
     static var icHealth: UIImage { .load(named: "ic_health") }
+    static var icImagePlus: UIImage { .load(named: "ic_image_plus") }
+    static var icInfo: UIImage { .load(named: "ic_info") }
+    static var icInvisible: UIImage { .load(named: "ic_invisible") }
     static var icLetterFill: UIImage { .load(named: "ic_letter_fill") }
     static var icLetter: UIImage { .load(named: "ic_letter") }
     static var icMenu: UIImage { .load(named: "ic_menu") }
@@ -28,6 +37,7 @@ enum ImageLiterals {
     static var icRecordSort: UIImage { .load(named: "ic_record_sort") }
     static var icRecordedWillFill: UIImage { .load(named: "ic_recorded_will_fill") }
     static var icRecordedWill: UIImage { .load(named: "ic_recorded_will") }
+    static var icVisible: UIImage { .load(named: "ic_visible") }
 }
 
 extension UIImage {
