@@ -41,18 +41,22 @@ extension UIFont {
     }
     
     @nonobjc class var b0: UIFont {
-        return UIFont.font(.pretendardRegular, ofSize: 16)
+        return UIFont.font(.pretendardRegular, ofSize: 20)
     }
     
     @nonobjc class var b1: UIFont {
-        return UIFont.font(.pretendardRegular, ofSize: 14)
+        return UIFont.font(.pretendardRegular, ofSize: 16)
     }
     
     @nonobjc class var b2: UIFont {
-        return UIFont.font(.pretendardRegular, ofSize: 12)
+        return UIFont.font(.pretendardRegular, ofSize: 14)
     }
     
     @nonobjc class var b3: UIFont {
+        return UIFont.font(.pretendardRegular, ofSize: 12)
+    }
+    
+    @nonobjc class var b4: UIFont {
         return UIFont.font(.pretendardRegular, ofSize: 10)
     }
 }
