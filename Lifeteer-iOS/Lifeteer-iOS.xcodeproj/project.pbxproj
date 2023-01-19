@@ -13,6 +13,12 @@
 		A3F7101E297905FB00705FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F7101C297905FB00705FBF /* Main.storyboard */; };
 		A3F71020297905FC00705FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F7101F297905FC00705FBF /* Assets.xcassets */; };
 		A3F71023297905FC00705FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F71021297905FC00705FBF /* LaunchScreen.storyboard */; };
+		A3F7102C2979062F00705FBF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A3F7102B2979062F00705FBF /* Moya */; };
+		A3F7102F2979063600705FBF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A3F7102E2979063600705FBF /* Kingfisher */; };
+		A3F710322979063F00705FBF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A3F710312979063F00705FBF /* SnapKit */; };
+		A3F710352979064500705FBF /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A3F710342979064500705FBF /* Then */; };
+		A3F710382979065900705FBF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A3F710372979065900705FBF /* Lottie */; };
+		A3F7103B2979067F00705FBF /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A3F7103A2979067F00705FBF /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F710382979065900705FBF /* Lottie in Frameworks */,
+				A3F7103B2979067F00705FBF /* FSCalendar in Frameworks */,
+				A3F710322979063F00705FBF /* SnapKit in Frameworks */,
+				A3F7102F2979063600705FBF /* Kingfisher in Frameworks */,
+				A3F7102C2979062F00705FBF /* Moya in Frameworks */,
+				A3F710352979064500705FBF /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,14 @@
 			dependencies = (
 			);
 			name = "Lifeteer-iOS";
+			packageProductDependencies = (
+				A3F7102B2979062F00705FBF /* Moya */,
+				A3F7102E2979063600705FBF /* Kingfisher */,
+				A3F710312979063F00705FBF /* SnapKit */,
+				A3F710342979064500705FBF /* Then */,
+				A3F710372979065900705FBF /* Lottie */,
+				A3F7103A2979067F00705FBF /* FSCalendar */,
+			);
 			productName = "Lifeteer-iOS";
 			productReference = A3F71013297905FB00705FBF /* Lifeteer-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,14 @@
 				Base,
 			);
 			mainGroup = A3F7100A297905FB00705FBF;
+			packageReferences = (
+				A3F7102A2979062F00705FBF /* XCRemoteSwiftPackageReference "Moya" */,
+				A3F7102D2979063600705FBF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A3F710302979063F00705FBF /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A3F710332979064500705FBF /* XCRemoteSwiftPackageReference "Then" */,
+				A3F710362979065900705FBF /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				A3F710392979067F00705FBF /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = A3F71014297905FB00705FBF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +386,90 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3F7102A2979062F00705FBF /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A3F7102D2979063600705FBF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A3F710302979063F00705FBF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		A3F710332979064500705FBF /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A3F710362979065900705FBF /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A3F710392979067F00705FBF /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3F7102B2979062F00705FBF /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3F7102A2979062F00705FBF /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		A3F7102E2979063600705FBF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3F7102D2979063600705FBF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		A3F710312979063F00705FBF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3F710302979063F00705FBF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		A3F710342979064500705FBF /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3F710332979064500705FBF /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		A3F710372979065900705FBF /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3F710362979065900705FBF /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		A3F7103A2979067F00705FBF /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3F710392979067F00705FBF /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A3F7100B297905FB00705FBF /* Project object */;
 }
