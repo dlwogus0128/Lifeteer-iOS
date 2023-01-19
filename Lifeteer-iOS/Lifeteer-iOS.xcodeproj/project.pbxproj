@@ -18,6 +18,44 @@
 		A3F710352979064500705FBF /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A3F710342979064500705FBF /* Then */; };
 		A3F710382979065900705FBF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A3F710372979065900705FBF /* Lottie */; };
 		A3F7103B2979067F00705FBF /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A3F7103A2979067F00705FBF /* FSCalendar */; };
+		A3F7109C29790B0100705FBF /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7108F29790B0000705FBF /* UIStackView+.swift */; };
+		A3F7109D29790B0100705FBF /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109029790B0000705FBF /* UIView+.swift */; };
+		A3F7109E29790B0100705FBF /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109129790B0000705FBF /* UITableView+.swift */; };
+		A3F7109F29790B0100705FBF /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109229790B0000705FBF /* UIButton+.swift */; };
+		A3F710A029790B0100705FBF /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109329790B0000705FBF /* UIViewController+.swift */; };
+		A3F710A129790B0100705FBF /* UITabBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109429790B0000705FBF /* UITabBar+.swift */; };
+		A3F710A229790B0100705FBF /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109529790B0100705FBF /* UIDevice+.swift */; };
+		A3F710A329790B0100705FBF /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109629790B0100705FBF /* UILabel+.swift */; };
+		A3F710A429790B0100705FBF /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109729790B0100705FBF /* UIColor+.swift */; };
+		A3F710A529790B0100705FBF /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109829790B0100705FBF /* UITextView+.swift */; };
+		A3F710A629790B0100705FBF /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109929790B0100705FBF /* UITextField+.swift */; };
+		A3F710A729790B0100705FBF /* UISwitch+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109A29790B0100705FBF /* UISwitch+.swift */; };
+		A3F710A829790B0100705FBF /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7109B29790B0100705FBF /* UIImage+.swift */; };
+		A3F710AD29790B1200705FBF /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710A929790B1200705FBF /* URL+.swift */; };
+		A3F710AE29790B1200705FBF /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710AA29790B1200705FBF /* String+.swift */; };
+		A3F710AF29790B1200705FBF /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710AB29790B1200705FBF /* Encodable+.swift */; };
+		A3F710B029790B1200705FBF /* Result+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710AC29790B1200705FBF /* Result+.swift */; };
+		A3F710B429790B1D00705FBF /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710B129790B1D00705FBF /* CancelBag.swift */; };
+		A3F710B529790B1D00705FBF /* Publisher+Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710B229790B1D00705FBF /* Publisher+Driver.swift */; };
+		A3F710B629790B1D00705FBF /* Publisher+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710B329790B1D00705FBF /* Publisher+UIControl.swift */; };
+		A3F710C929790B3800705FBF /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710B729790B3700705FBF /* UserDefaultWrapper.swift */; };
+		A3F710CA29790B3800705FBF /* adjusted+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710B829790B3700705FBF /* adjusted+.swift */; };
+		A3F710CB29790B3800705FBF /* setRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710B929790B3700705FBF /* setRootViewController.swift */; };
+		A3F710CC29790B3800705FBF /* makeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710BA29790B3700705FBF /* makeAlert.swift */; };
+		A3F710CD29790B3800705FBF /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710BB29790B3700705FBF /* LoadingIndicator.swift */; };
+		A3F710CE29790B3800705FBF /* calculateStatusBarHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710BC29790B3700705FBF /* calculateStatusBarHeight.swift */; };
+		A3F710CF29790B3800705FBF /* makeVibrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710BD29790B3700705FBF /* makeVibrate.swift */; };
+		A3F710D029790B3800705FBF /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710BE29790B3700705FBF /* Toast.swift */; };
+		A3F710D129790B3800705FBF /* UserDefaultKeyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710BF29790B3700705FBF /* UserDefaultKeyList.swift */; };
+		A3F710D229790B3800705FBF /* calculateTopInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C029790B3700705FBF /* calculateTopInset.swift */; };
+		A3F710D329790B3800705FBF /* addToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C129790B3800705FBF /* addToolBar.swift */; };
+		A3F710D429790B3800705FBF /* setTextLineHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C229790B3800705FBF /* setTextLineHeight.swift */; };
+		A3F710D529790B3800705FBF /* getClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C329790B3800705FBF /* getClassName.swift */; };
+		A3F710D629790B3800705FBF /* JsonCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C429790B3800705FBF /* JsonCoder.swift */; };
+		A3F710D729790B3800705FBF /* calculatePastTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C529790B3800705FBF /* calculatePastTime.swift */; };
+		A3F710D829790B3800705FBF /* setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C629790B3800705FBF /* setImage.swift */; };
+		A3F710D929790B3800705FBF /* applyShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C729790B3800705FBF /* applyShadow.swift */; };
+		A3F710DA29790B3800705FBF /* setStatusBarBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C829790B3800705FBF /* setStatusBarBackgroundColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +66,44 @@
 		A3F7101F297905FC00705FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F71022297905FC00705FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3F71024297905FC00705FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3F7108F29790B0000705FBF /* UIStackView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		A3F7109029790B0000705FBF /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		A3F7109129790B0000705FBF /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		A3F7109229790B0000705FBF /* UIButton+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		A3F7109329790B0000705FBF /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		A3F7109429790B0000705FBF /* UITabBar+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+.swift"; sourceTree = "<group>"; };
+		A3F7109529790B0100705FBF /* UIDevice+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
+		A3F7109629790B0100705FBF /* UILabel+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		A3F7109729790B0100705FBF /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		A3F7109829790B0100705FBF /* UITextView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
+		A3F7109929790B0100705FBF /* UITextField+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		A3F7109A29790B0100705FBF /* UISwitch+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISwitch+.swift"; sourceTree = "<group>"; };
+		A3F7109B29790B0100705FBF /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		A3F710A929790B1200705FBF /* URL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		A3F710AA29790B1200705FBF /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		A3F710AB29790B1200705FBF /* Encodable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		A3F710AC29790B1200705FBF /* Result+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+.swift"; sourceTree = "<group>"; };
+		A3F710B129790B1D00705FBF /* CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		A3F710B229790B1D00705FBF /* Publisher+Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Driver.swift"; sourceTree = "<group>"; };
+		A3F710B329790B1D00705FBF /* Publisher+UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+UIControl.swift"; sourceTree = "<group>"; };
+		A3F710B729790B3700705FBF /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
+		A3F710B829790B3700705FBF /* adjusted+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "adjusted+.swift"; sourceTree = "<group>"; };
+		A3F710B929790B3700705FBF /* setRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setRootViewController.swift; sourceTree = "<group>"; };
+		A3F710BA29790B3700705FBF /* makeAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = makeAlert.swift; sourceTree = "<group>"; };
+		A3F710BB29790B3700705FBF /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		A3F710BC29790B3700705FBF /* calculateStatusBarHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculateStatusBarHeight.swift; sourceTree = "<group>"; };
+		A3F710BD29790B3700705FBF /* makeVibrate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = makeVibrate.swift; sourceTree = "<group>"; };
+		A3F710BE29790B3700705FBF /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		A3F710BF29790B3700705FBF /* UserDefaultKeyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultKeyList.swift; sourceTree = "<group>"; };
+		A3F710C029790B3700705FBF /* calculateTopInset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculateTopInset.swift; sourceTree = "<group>"; };
+		A3F710C129790B3800705FBF /* addToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addToolBar.swift; sourceTree = "<group>"; };
+		A3F710C229790B3800705FBF /* setTextLineHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setTextLineHeight.swift; sourceTree = "<group>"; };
+		A3F710C329790B3800705FBF /* getClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getClassName.swift; sourceTree = "<group>"; };
+		A3F710C429790B3800705FBF /* JsonCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonCoder.swift; sourceTree = "<group>"; };
+		A3F710C529790B3800705FBF /* calculatePastTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculatePastTime.swift; sourceTree = "<group>"; };
+		A3F710C629790B3800705FBF /* setImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setImage.swift; sourceTree = "<group>"; };
+		A3F710C729790B3800705FBF /* applyShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = applyShadow.swift; sourceTree = "<group>"; };
+		A3F710C829790B3800705FBF /* setStatusBarBackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setStatusBarBackgroundColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +204,24 @@
 			isa = PBXGroup;
 			children = (
 				A3F7106A29790A1600705FBF /* LTUtils */,
+				A3F710C129790B3800705FBF /* addToolBar.swift */,
+				A3F710B829790B3700705FBF /* adjusted+.swift */,
+				A3F710C729790B3800705FBF /* applyShadow.swift */,
+				A3F710C529790B3800705FBF /* calculatePastTime.swift */,
+				A3F710BC29790B3700705FBF /* calculateStatusBarHeight.swift */,
+				A3F710C029790B3700705FBF /* calculateTopInset.swift */,
+				A3F710C329790B3800705FBF /* getClassName.swift */,
+				A3F710C429790B3800705FBF /* JsonCoder.swift */,
+				A3F710BB29790B3700705FBF /* LoadingIndicator.swift */,
+				A3F710BA29790B3700705FBF /* makeAlert.swift */,
+				A3F710BD29790B3700705FBF /* makeVibrate.swift */,
+				A3F710C629790B3800705FBF /* setImage.swift */,
+				A3F710B929790B3700705FBF /* setRootViewController.swift */,
+				A3F710C829790B3800705FBF /* setStatusBarBackgroundColor.swift */,
+				A3F710C229790B3800705FBF /* setTextLineHeight.swift */,
+				A3F710BE29790B3700705FBF /* Toast.swift */,
+				A3F710BF29790B3700705FBF /* UserDefaultKeyList.swift */,
+				A3F710B729790B3700705FBF /* UserDefaultWrapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -411,6 +505,9 @@
 		A3F71067297909FE00705FBF /* Combine+ */ = {
 			isa = PBXGroup;
 			children = (
+				A3F710B129790B1D00705FBF /* CancelBag.swift */,
+				A3F710B229790B1D00705FBF /* Publisher+Driver.swift */,
+				A3F710B329790B1D00705FBF /* Publisher+UIControl.swift */,
 			);
 			path = "Combine+";
 			sourceTree = "<group>";
@@ -418,6 +515,10 @@
 		A3F7106829790A0400705FBF /* Foundation+ */ = {
 			isa = PBXGroup;
 			children = (
+				A3F710AB29790B1200705FBF /* Encodable+.swift */,
+				A3F710AC29790B1200705FBF /* Result+.swift */,
+				A3F710AA29790B1200705FBF /* String+.swift */,
+				A3F710A929790B1200705FBF /* URL+.swift */,
 			);
 			path = "Foundation+";
 			sourceTree = "<group>";
@@ -425,6 +526,19 @@
 		A3F7106929790A0B00705FBF /* UIKit+ */ = {
 			isa = PBXGroup;
 			children = (
+				A3F7109229790B0000705FBF /* UIButton+.swift */,
+				A3F7109729790B0100705FBF /* UIColor+.swift */,
+				A3F7109529790B0100705FBF /* UIDevice+.swift */,
+				A3F7109B29790B0100705FBF /* UIImage+.swift */,
+				A3F7109629790B0100705FBF /* UILabel+.swift */,
+				A3F7108F29790B0000705FBF /* UIStackView+.swift */,
+				A3F7109A29790B0100705FBF /* UISwitch+.swift */,
+				A3F7109429790B0000705FBF /* UITabBar+.swift */,
+				A3F7109129790B0000705FBF /* UITableView+.swift */,
+				A3F7109929790B0100705FBF /* UITextField+.swift */,
+				A3F7109829790B0100705FBF /* UITextView+.swift */,
+				A3F7109029790B0000705FBF /* UIView+.swift */,
+				A3F7109329790B0000705FBF /* UIViewController+.swift */,
 			);
 			path = "UIKit+";
 			sourceTree = "<group>";
@@ -522,9 +636,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F710D929790B3800705FBF /* applyShadow.swift in Sources */,
+				A3F710CE29790B3800705FBF /* calculateStatusBarHeight.swift in Sources */,
+				A3F710C929790B3800705FBF /* UserDefaultWrapper.swift in Sources */,
+				A3F710B529790B1D00705FBF /* Publisher+Driver.swift in Sources */,
 				A3F7101B297905FB00705FBF /* ViewController.swift in Sources */,
+				A3F710D529790B3800705FBF /* getClassName.swift in Sources */,
+				A3F710DA29790B3800705FBF /* setStatusBarBackgroundColor.swift in Sources */,
+				A3F710A729790B0100705FBF /* UISwitch+.swift in Sources */,
+				A3F710A229790B0100705FBF /* UIDevice+.swift in Sources */,
+				A3F710D729790B3800705FBF /* calculatePastTime.swift in Sources */,
+				A3F7109F29790B0100705FBF /* UIButton+.swift in Sources */,
+				A3F710A029790B0100705FBF /* UIViewController+.swift in Sources */,
+				A3F710D229790B3800705FBF /* calculateTopInset.swift in Sources */,
+				A3F710CB29790B3800705FBF /* setRootViewController.swift in Sources */,
+				A3F710B429790B1D00705FBF /* CancelBag.swift in Sources */,
+				A3F710B629790B1D00705FBF /* Publisher+UIControl.swift in Sources */,
+				A3F710D029790B3800705FBF /* Toast.swift in Sources */,
+				A3F710A829790B0100705FBF /* UIImage+.swift in Sources */,
 				A3F71017297905FB00705FBF /* AppDelegate.swift in Sources */,
+				A3F710A429790B0100705FBF /* UIColor+.swift in Sources */,
+				A3F710A129790B0100705FBF /* UITabBar+.swift in Sources */,
 				A3F71019297905FB00705FBF /* SceneDelegate.swift in Sources */,
+				A3F710AE29790B1200705FBF /* String+.swift in Sources */,
+				A3F710AD29790B1200705FBF /* URL+.swift in Sources */,
+				A3F710A529790B0100705FBF /* UITextView+.swift in Sources */,
+				A3F710CC29790B3800705FBF /* makeAlert.swift in Sources */,
+				A3F710CA29790B3800705FBF /* adjusted+.swift in Sources */,
+				A3F710A629790B0100705FBF /* UITextField+.swift in Sources */,
+				A3F710D429790B3800705FBF /* setTextLineHeight.swift in Sources */,
+				A3F710B029790B1200705FBF /* Result+.swift in Sources */,
+				A3F710D329790B3800705FBF /* addToolBar.swift in Sources */,
+				A3F710AF29790B1200705FBF /* Encodable+.swift in Sources */,
+				A3F7109E29790B0100705FBF /* UITableView+.swift in Sources */,
+				A3F710CD29790B3800705FBF /* LoadingIndicator.swift in Sources */,
+				A3F710A329790B0100705FBF /* UILabel+.swift in Sources */,
+				A3F710D829790B3800705FBF /* setImage.swift in Sources */,
+				A3F710D129790B3800705FBF /* UserDefaultKeyList.swift in Sources */,
+				A3F7109C29790B0100705FBF /* UIStackView+.swift in Sources */,
+				A3F7109D29790B0100705FBF /* UIView+.swift in Sources */,
+				A3F710CF29790B3800705FBF /* makeVibrate.swift in Sources */,
+				A3F710D629790B3800705FBF /* JsonCoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
