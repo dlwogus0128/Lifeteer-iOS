@@ -10,7 +10,6 @@
 		A3F71017297905FB00705FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F71016297905FB00705FBF /* AppDelegate.swift */; };
 		A3F71019297905FB00705FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F71018297905FB00705FBF /* SceneDelegate.swift */; };
 		A3F7101B297905FB00705FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7101A297905FB00705FBF /* ViewController.swift */; };
-		A3F7101E297905FB00705FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F7101C297905FB00705FBF /* Main.storyboard */; };
 		A3F71020297905FC00705FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F7101F297905FC00705FBF /* Assets.xcassets */; };
 		A3F71023297905FC00705FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F71021297905FC00705FBF /* LaunchScreen.storyboard */; };
 		A3F7102C2979062F00705FBF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A3F7102B2979062F00705FBF /* Moya */; };
@@ -26,7 +25,6 @@
 		A3F71016297905FB00705FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3F71018297905FB00705FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A3F7101A297905FB00705FBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A3F7101D297905FB00705FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3F7101F297905FC00705FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F71022297905FC00705FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3F71024297905FC00705FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,15 +66,374 @@
 		A3F71015297905FB00705FBF /* Lifeteer-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A3F71016297905FB00705FBF /* AppDelegate.swift */,
-				A3F71018297905FB00705FBF /* SceneDelegate.swift */,
+				A3F7103E2979070800705FBF /* Global */,
+				A3F7103D2979070400705FBF /* Network */,
+				A3F7103C297906FE00705FBF /* Presentation */,
 				A3F7101A297905FB00705FBF /* ViewController.swift */,
-				A3F7101C297905FB00705FBF /* Main.storyboard */,
-				A3F7101F297905FC00705FBF /* Assets.xcassets */,
-				A3F71021297905FC00705FBF /* LaunchScreen.storyboard */,
 				A3F71024297905FC00705FBF /* Info.plist */,
 			);
 			path = "Lifeteer-iOS";
+			sourceTree = "<group>";
+		};
+		A3F7103C297906FE00705FBF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A3F71053297907A100705FBF /* Splash */,
+				A3F710522979079900705FBF /* SignIn */,
+				A3F710512979079100705FBF /* Landing */,
+				A3F710502979078A00705FBF /* TabBar */,
+				A3F7104F2979078400705FBF /* Letter */,
+				A3F7104E2979077700705FBF /* RecordedWill */,
+				A3F7104D2979076F00705FBF /* MindSet */,
+				A3F7104C2979076800705FBF /* BucketList */,
+				A3F7104B2979076400705FBF /* Diary */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A3F7103D2979070400705FBF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A3F7104A2979075B00705FBF /* Foundation */,
+				A3F710492979075800705FBF /* Dto */,
+				A3F710482979075200705FBF /* Service */,
+				A3F710472979074C00705FBF /* Router */,
+				A3F710462979074800705FBF /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A3F7103E2979070800705FBF /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				A3F710452979073B00705FBF /* UICoponents */,
+				A3F710442979073300705FBF /* Literal */,
+				A3F710432979072F00705FBF /* Resource */,
+				A3F710422979072800705FBF /* Supports */,
+				A3F710412979071D00705FBF /* Extension */,
+				A3F710402979071600705FBF /* Utils */,
+				A3F7103F2979071100705FBF /* Protocols */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		A3F7103F2979071100705FBF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A3F710402979071600705FBF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A3F7106A29790A1600705FBF /* LTUtils */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A3F710412979071D00705FBF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A3F7106929790A0B00705FBF /* UIKit+ */,
+				A3F7106829790A0400705FBF /* Foundation+ */,
+				A3F71067297909FE00705FBF /* Combine+ */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A3F710422979072800705FBF /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				A3F71021297905FC00705FBF /* LaunchScreen.storyboard */,
+				A3F71016297905FB00705FBF /* AppDelegate.swift */,
+				A3F71018297905FB00705FBF /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		A3F710432979072F00705FBF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A3F71066297909D500705FBF /* Fonts */,
+				A3F7101F297905FC00705FBF /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A3F710442979073300705FBF /* Literal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Literal;
+			sourceTree = "<group>";
+		};
+		A3F710452979073B00705FBF /* UICoponents */ = {
+			isa = PBXGroup;
+			children = (
+				A3F71065297909CA00705FBF /* ViewPager */,
+			);
+			path = UICoponents;
+			sourceTree = "<group>";
+		};
+		A3F710462979074800705FBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A3F710472979074C00705FBF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A3F710482979075200705FBF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A3F710492979075800705FBF /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		A3F7104A2979075B00705FBF /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		A3F7104B2979076400705FBF /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				A3F71064297909B700705FBF /* Views */,
+				A3F71063297909B400705FBF /* VC */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		A3F7104C2979076800705FBF /* BucketList */ = {
+			isa = PBXGroup;
+			children = (
+				A3F71062297909B100705FBF /* Views */,
+				A3F71061297909AF00705FBF /* VC */,
+			);
+			path = BucketList;
+			sourceTree = "<group>";
+		};
+		A3F7104D2979076F00705FBF /* MindSet */ = {
+			isa = PBXGroup;
+			children = (
+				A3F71060297909AA00705FBF /* Views */,
+				A3F7105E297909A200705FBF /* VC */,
+			);
+			path = MindSet;
+			sourceTree = "<group>";
+		};
+		A3F7104E2979077700705FBF /* RecordedWill */ = {
+			isa = PBXGroup;
+			children = (
+				A3F7105D2979099E00705FBF /* Views */,
+				A3F7105C2979099800705FBF /* VC */,
+			);
+			path = RecordedWill;
+			sourceTree = "<group>";
+		};
+		A3F7104F2979078400705FBF /* Letter */ = {
+			isa = PBXGroup;
+			children = (
+				A3F7105A2979098B00705FBF /* Views */,
+				A3F710592979098600705FBF /* VC */,
+			);
+			path = Letter;
+			sourceTree = "<group>";
+		};
+		A3F710502979078A00705FBF /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A3F710512979079100705FBF /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				A3F710582979098200705FBF /* Views */,
+				A3F710572979098000705FBF /* VC */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		A3F710522979079900705FBF /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A3F710562979097300705FBF /* Views */,
+				A3F710552979096D00705FBF /* VC */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		A3F71053297907A100705FBF /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				A3F710542979096800705FBF /* VC */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		A3F710542979096800705FBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A3F710552979096D00705FBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A3F710562979097300705FBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3F710572979098000705FBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A3F710582979098200705FBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3F710592979098600705FBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A3F7105A2979098B00705FBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3F7105C2979099800705FBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A3F7105D2979099E00705FBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3F7105E297909A200705FBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A3F71060297909AA00705FBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3F71061297909AF00705FBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A3F71062297909B100705FBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3F71063297909B400705FBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A3F71064297909B700705FBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3F71065297909CA00705FBF /* ViewPager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewPager;
+			sourceTree = "<group>";
+		};
+		A3F71066297909D500705FBF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A3F71067297909FE00705FBF /* Combine+ */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Combine+";
+			sourceTree = "<group>";
+		};
+		A3F7106829790A0400705FBF /* Foundation+ */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Foundation+";
+			sourceTree = "<group>";
+		};
+		A3F7106929790A0B00705FBF /* UIKit+ */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UIKit+";
+			sourceTree = "<group>";
+		};
+		A3F7106A29790A1600705FBF /* LTUtils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LTUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +512,6 @@
 			files = (
 				A3F71023297905FC00705FBF /* LaunchScreen.storyboard in Resources */,
 				A3F71020297905FC00705FBF /* Assets.xcassets in Resources */,
-				A3F7101E297905FB00705FBF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,14 +531,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A3F7101C297905FB00705FBF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3F7101D297905FB00705FBF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A3F71021297905FC00705FBF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
