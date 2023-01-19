@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3531E032979280B0089F2F5 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E022979280B0089F2F5 /* Pretendard-Regular.otf */; };
+		A3531E052979281B0089F2F5 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E042979281B0089F2F5 /* Pretendard-Medium.otf */; };
+		A3531E07297928D30089F2F5 /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E06297928D30089F2F5 /* FontLiterals.swift */; };
+		A3531E0929792A1C0089F2F5 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E0829792A1C0089F2F5 /* Pretendard-Bold.otf */; };
 		A3F71017297905FB00705FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F71016297905FB00705FBF /* AppDelegate.swift */; };
 		A3F71019297905FB00705FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F71018297905FB00705FBF /* SceneDelegate.swift */; };
 		A3F7101B297905FB00705FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F7101A297905FB00705FBF /* ViewController.swift */; };
@@ -60,6 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A3531E022979280B0089F2F5 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		A3531E042979281B0089F2F5 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		A3531E06297928D30089F2F5 /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
+		A3531E0829792A1C0089F2F5 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		A3F71013297905FB00705FBF /* Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F71016297905FB00705FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3F71018297905FB00705FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 		A3F710442979073300705FBF /* Literal */ = {
 			isa = PBXGroup;
 			children = (
+				A3531E06297928D30089F2F5 /* FontLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -501,6 +510,9 @@
 		A3F71066297909D500705FBF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A3531E0829792A1C0089F2F5 /* Pretendard-Bold.otf */,
+				A3531E042979281B0089F2F5 /* Pretendard-Medium.otf */,
+				A3531E022979280B0089F2F5 /* Pretendard-Regular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -629,6 +641,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3F710DD29790BFD00705FBF /* .swiftlint.yml in Resources */,
+				A3531E0929792A1C0089F2F5 /* Pretendard-Bold.otf in Resources */,
+				A3531E052979281B0089F2F5 /* Pretendard-Medium.otf in Resources */,
+				A3531E032979280B0089F2F5 /* Pretendard-Regular.otf in Resources */,
 				A3F71023297905FC00705FBF /* LaunchScreen.storyboard in Resources */,
 				A3F71020297905FC00705FBF /* Assets.xcassets in Resources */,
 			);
@@ -677,6 +692,7 @@
 				A3F710A029790B0100705FBF /* UIViewController+.swift in Sources */,
 				A3F710D229790B3800705FBF /* calculateTopInset.swift in Sources */,
 				A3F710CB29790B3800705FBF /* setRootViewController.swift in Sources */,
+				A3531E07297928D30089F2F5 /* FontLiterals.swift in Sources */,
 				A3F710B429790B1D00705FBF /* CancelBag.swift in Sources */,
 				A3F710B629790B1D00705FBF /* Publisher+UIControl.swift in Sources */,
 				A3F710D029790B3800705FBF /* Toast.swift in Sources */,
