@@ -14,6 +14,10 @@ class RecordedWillMainVC: UIViewController {
         view.backgroundColor = .mainBackground
         // Do any additional setup after loading the view.
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> #4-에셋-및-탭바-세팅
 
     /*
     // MARK: - Navigation
