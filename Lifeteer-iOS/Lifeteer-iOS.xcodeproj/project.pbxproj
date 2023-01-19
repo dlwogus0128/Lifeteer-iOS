@@ -56,6 +56,7 @@
 		A3F710D829790B3800705FBF /* setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C629790B3800705FBF /* setImage.swift */; };
 		A3F710D929790B3800705FBF /* applyShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C729790B3800705FBF /* applyShadow.swift */; };
 		A3F710DA29790B3800705FBF /* setStatusBarBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F710C829790B3800705FBF /* setStatusBarBackgroundColor.swift */; };
+		A3F710DD29790BFD00705FBF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A3F710DC29790BFD00705FBF /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		A3F710C629790B3800705FBF /* setImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setImage.swift; sourceTree = "<group>"; };
 		A3F710C729790B3800705FBF /* applyShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = applyShadow.swift; sourceTree = "<group>"; };
 		A3F710C829790B3800705FBF /* setStatusBarBackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setStatusBarBackgroundColor.swift; sourceTree = "<group>"; };
+		A3F710DC29790BFD00705FBF /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		A3F7100A297905FB00705FBF = {
 			isa = PBXGroup;
 			children = (
+				A3F710DC29790BFD00705FBF /* .swiftlint.yml */,
 				A3F71015297905FB00705FBF /* Lifeteer-iOS */,
 				A3F71014297905FB00705FBF /* Products */,
 			);
@@ -560,6 +563,7 @@
 				A3F7100F297905FB00705FBF /* Sources */,
 				A3F71010297905FB00705FBF /* Frameworks */,
 				A3F71011297905FB00705FBF /* Resources */,
+				A3F710DB29790BA300705FBF /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -624,12 +628,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F710DD29790BFD00705FBF /* .swiftlint.yml in Resources */,
 				A3F71023297905FC00705FBF /* LaunchScreen.storyboard in Resources */,
 				A3F71020297905FC00705FBF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3F710DB29790BA300705FBF /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3F7100F297905FB00705FBF /* Sources */ = {
