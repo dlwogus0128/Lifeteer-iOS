@@ -19,9 +19,9 @@ import UIKit
 public extension CALayer {
     func applyShadow(
         color: UIColor = .black,
-        alpha: Float = 0.5,
+        alpha: Float = 0.25,
         x: CGFloat = 0,
-        y: CGFloat = 2,
+        y: CGFloat = 4,
         blur: CGFloat = 4,
         spread: CGFloat = 0) {
             
