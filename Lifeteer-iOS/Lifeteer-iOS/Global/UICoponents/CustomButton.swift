@@ -91,7 +91,7 @@ extension CustomButton {
             self.setAttributedTitle(
                 NSAttributedString(
                     string: title,
-                    attributes: [.font: UIFont.h6, .foregroundColor: UIColor.mainGreen]
+                    attributes: [.font: UIFont.b3, .foregroundColor: UIColor.mainGreen]
                 ),
                 for: .normal
             )
