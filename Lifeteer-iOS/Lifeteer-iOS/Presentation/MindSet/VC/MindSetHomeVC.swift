@@ -69,6 +69,8 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
         $0.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 35, right: 16)
         $0.layer.cornerRadius = 20
     }
+    
+    private let saveButton = CustomButton(title: "마음짓기 저장하기", type: .fillWithGreen)
 
     // MARK: - View Life Cycle
     
@@ -135,7 +137,7 @@ extension MindSetHomeVC {
 
     private func setLayout() {
         view.addSubviews(naviBar, monthLabel, mindSetCalendar,
-                         todayMindSetLabel, viewHistoryButton, writeMindSetContainer)
+                         todayMindSetLabel, viewHistoryButton, writeMindSetContainer, saveButton)
         
         naviBar.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
@@ -201,6 +203,12 @@ extension MindSetHomeVC {
         answerTextView.snp.makeConstraints { make in
             make.top.equalTo(questionTextView.snp.bottom).offset(32)
             make.leading.trailing.bottom.equalToSuperview().inset(16)
+        }
+        
+        saveButton.snp.makeConstraints { make in
+            make.top.equalTo(writeMindSetContainer.snp.bottom).offset(12)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+            make.height.equalTo(48)
         }
     }
 }
