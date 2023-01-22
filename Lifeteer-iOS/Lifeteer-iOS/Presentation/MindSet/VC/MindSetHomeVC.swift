@@ -143,8 +143,9 @@ extension MindSetHomeVC {
                          todayMindSetLabel, viewHistoryButton, writeMindSetContainer, saveButton)
         
         naviBar.snp.makeConstraints { make in
-            make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            make.height.equalTo(54)
+            make.top.equalToSuperview()
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(98)
         }
         
         monthLabel.snp.makeConstraints { make in

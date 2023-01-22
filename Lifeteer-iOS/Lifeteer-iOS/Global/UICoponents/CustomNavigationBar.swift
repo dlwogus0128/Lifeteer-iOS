@@ -162,7 +162,7 @@ extension CustomNavigationBar {
         self.addSubview(backButton)
         
         backButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.bottom.equalToSuperview().inset(16)
             make.leading.equalToSuperview().inset(20)
             make.height.equalTo(22)
             make.width.equalTo(11)
@@ -173,14 +173,15 @@ extension CustomNavigationBar {
         self.addSubviews(backButton, centerTitleLabel)
         
         backButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.bottom.equalToSuperview().inset(16)
             make.leading.equalToSuperview().inset(20)
             make.height.equalTo(22)
             make.width.equalTo(11)
         }
         
         centerTitleLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(12)
         }
     }
     
@@ -188,14 +189,15 @@ extension CustomNavigationBar {
         self.addSubviews(menuButton, centerTitleLabel)
         
         menuButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.bottom.equalToSuperview().inset(17)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(20)
             make.width.equalTo(24)
         }
         
         centerTitleLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(12)
         }
     }
     
@@ -203,14 +205,15 @@ extension CustomNavigationBar {
         self.addSubviews(menuButton, mindSetBIImageView)
         
         menuButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.bottom.equalToSuperview().inset(17)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(20)
             make.width.equalTo(24)
         }
         
         mindSetBIImageView.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(11)
             make.height.equalTo(31)
             make.width.equalTo(43)
         }
@@ -220,27 +223,29 @@ extension CustomNavigationBar {
         self.addSubviews(backButton, menuButton, mindSetBIImageView, centerTitleLabel)
         
         backButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.bottom.equalToSuperview().inset(16)
             make.leading.equalToSuperview().inset(20)
             make.height.equalTo(22)
             make.width.equalTo(11)
         }
         
         menuButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.bottom.equalToSuperview().inset(17)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(20)
             make.width.equalTo(24)
         }
         
         mindSetBIImageView.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(11)
             make.height.equalTo(31)
             make.width.equalTo(43)
         }
         
         centerTitleLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(12)
         }
     }
 }
