@@ -19,7 +19,9 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
     
     // MARK: - UI Components
     
-    private lazy var naviBar = CustomNavigationBar(self, type: .menuButtonWithBI)
+    private lazy var naviBar = CustomNavigationBar(self, type: .menuButtonWithBI).then {
+        $0.layer.applyShadow(alpha: 0.10, y: 10, blur: 21)
+    }
     private let monthLabel = UILabel().then {
         $0.textColor = .mainBlack
         $0.font = .b1
@@ -27,7 +29,7 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
     }
     private var mindSetCalendar: FSCalendar! = FSCalendar(frame: .zero)
     private let todayMindSetLabel = UILabel().then {
-        $0.text = "오늘의 마음 짓기"
+        $0.text = "오늘의 마음짓기"
         $0.font = .h1
         $0.textColor = .mainBlack
     }
@@ -35,7 +37,7 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
     private let viewHistoryButton = CustomButton(title: "기록 보기", type: .borderWithoutBGC)
     private let writeMindSetContainer = UIView().then {
         $0.layer.cornerRadius = 20
-        $0.layer.applyShadow(alpha: 0.25, y: 4, blur: 4)
+        $0.layer.applyShadow(alpha: 0.10, y: 10, blur: 21)
     }
     
     private let questionNumberLabel = UILabel().then {
@@ -74,8 +76,9 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
 
     // MARK: - View Life Cycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
         setUI()
         setCalendar()
         setLayout()
@@ -174,8 +177,7 @@ extension MindSetHomeVC {
         }
         
         writeMindSetContainer.addSubviews(questionNumberLabel, horizontalDividingLine,
-                                          selectedDateLabel, questionNumberLabel,
-                                          questionTextView,answerTextView)
+                                          selectedDateLabel, questionNumberLabel,questionTextView,answerTextView)
         
         questionNumberLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
@@ -197,7 +199,7 @@ extension MindSetHomeVC {
         questionTextView.snp.makeConstraints { make in
             make.top.equalTo(horizontalDividingLine.snp.bottom).offset(24)
             make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(53)
+            //make.height.equalTo(53)
         }
         
         answerTextView.snp.makeConstraints { make in
