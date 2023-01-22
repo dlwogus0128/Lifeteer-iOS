@@ -17,19 +17,20 @@ final class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.delegate = self
+        setDelegate()
         setUI()
         setTabBarControllers()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.addTabBarIndicatorView(index: 0, isFirstTime: true)
-        }
+        setUpperLine()
     }
 }
 
 // MARK: - Methods
 
 extension TabBarController {
+    private func setDelegate() {
+        self.delegate = self
+    }
+    
     private func setUI() {
         tabBar.backgroundColor = .mainBackground
         tabBar.unselectedItemTintColor = .disabledText
@@ -59,6 +60,12 @@ extension TabBarController {
                                                         rootViewController: DiaryMainVC())
         
         viewControllers = [letterMainNVC, recordedWillMainNVC, mindSetHomeNVC, bucketListMainNVC, diaryMainNVC]
+    }
+    
+    private func setUpperLine() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.addTabBarIndicatorView(index: 0, isFirstTime: true)
+        }
     }
     
     /// Add tabbar item indicator upper line
