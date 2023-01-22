@@ -171,10 +171,16 @@ extension MindSetHomeVC {
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(20)
         }
         
+        saveButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(114)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+            make.height.equalTo(48)
+        }
+        
         writeMindSetContainer.snp.makeConstraints { make in
             make.top.equalTo(viewHistoryButton.snp.bottom).offset(19)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
-            make.height.equalTo(303)
+            make.bottom.equalTo(saveButton.snp.top).offset(-12)
         }
         
         writeMindSetContainer.addSubviews(questionNumberLabel, horizontalDividingLine,
@@ -200,18 +206,11 @@ extension MindSetHomeVC {
         questionTextView.snp.makeConstraints { make in
             make.top.equalTo(horizontalDividingLine.snp.bottom).offset(24)
             make.leading.trailing.equalToSuperview().inset(16)
-            //make.height.equalTo(53)
         }
         
         answerTextView.snp.makeConstraints { make in
             make.top.equalTo(questionTextView.snp.bottom).offset(32)
             make.leading.trailing.bottom.equalToSuperview().inset(16)
-        }
-        
-        saveButton.snp.makeConstraints { make in
-            make.top.equalTo(writeMindSetContainer.snp.bottom).offset(12)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
-            make.height.equalTo(48)
         }
     }
 }
