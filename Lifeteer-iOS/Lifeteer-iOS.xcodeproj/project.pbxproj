@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A300B6C629B746D300514F9A /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A300B6C529B746D300514F9A /* GmarketSansLight.otf */; };
+		A300B6C829B747AB00514F9A /* StartLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300B6C729B747AB00514F9A /* StartLandingPageVC.swift */; };
 		A3531E032979280B0089F2F5 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E022979280B0089F2F5 /* Pretendard-Regular.otf */; };
 		A3531E052979281B0089F2F5 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E042979281B0089F2F5 /* Pretendard-Medium.otf */; };
 		A3531E07297928D30089F2F5 /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E06297928D30089F2F5 /* FontLiterals.swift */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		A300B6C529B746D300514F9A /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansLight.otf; sourceTree = "<group>"; };
+		A300B6C729B747AB00514F9A /* StartLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLandingPageVC.swift; sourceTree = "<group>"; };
 		A3531E022979280B0089F2F5 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		A3531E042979281B0089F2F5 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		A3531E06297928D30089F2F5 /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 		A3F710572979098000705FBF /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A300B6C729B747AB00514F9A /* StartLandingPageVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				A3F710CB29790B3800705FBF /* setRootViewController.swift in Sources */,
 				A3531E07297928D30089F2F5 /* FontLiterals.swift in Sources */,
 				A3F710B429790B1D00705FBF /* CancelBag.swift in Sources */,
+				A300B6C829B747AB00514F9A /* StartLandingPageVC.swift in Sources */,
 				A3F710B629790B1D00705FBF /* Publisher+UIControl.swift in Sources */,
 				A3F710D029790B3800705FBF /* Toast.swift in Sources */,
 				A3F710A829790B0100705FBF /* UIImage+.swift in Sources */,
