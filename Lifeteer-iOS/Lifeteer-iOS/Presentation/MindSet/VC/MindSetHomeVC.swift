@@ -184,7 +184,7 @@ extension MindSetHomeVC {
         }
         
         writeMindSetContainer.addSubviews(questionNumberLabel, horizontalDividingLine,
-                                          selectedDateLabel, questionNumberLabel,questionTextView,answerTextView)
+                                          selectedDateLabel, questionNumberLabel, questionTextView, answerTextView)
         
         questionNumberLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
@@ -233,5 +233,4 @@ extension MindSetHomeVC {
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleSelectionColorFor date: Date) -> UIColor? {
         return .mainBlack.withAlphaComponent(0.8)
     }
-    
 }
