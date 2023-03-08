@@ -19,13 +19,14 @@ final class DetailLandingPageVC: UIViewController {
         return [FirstDetailLandingPageVC(), SecondDetailLandingPageVC(), ThirdDetailLandingPageVC(), LastDetailLandingPageVC()]
     }()
     private let detailLandingPageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-    
+    private var pageControl: UIPageControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setLayout()
         setFirstDetailLandingPageVC()
         setDelegate()
+        setPageControl()
     }
 }
 
@@ -42,6 +43,16 @@ extension DetailLandingPageVC {
         detailLandingPageViewController.delegate = self
         detailLandingPageViewController.dataSource = self
     }
+    
+    private func setPageControl() {
+        pageControl = UIPageControl.appearance()
+        pageControl.numberOfPages = pageDataViewControllers.count
+        pageControl.currentPage = 0
+        pageControl.pageIndicatorTintColor = .disabledFill
+        pageControl.currentPageIndicatorTintColor = .mainGreen
+        pageControl.backgroundColor = UIColor.clear
+        pageControl.backgroundStyle = .minimal
+    }
 }
 
 // MARK: - UI & Layout
@@ -55,7 +66,7 @@ extension DetailLandingPageVC {
     private func setLayout() {
         view.addSubview(naviBar)
         addChild(detailLandingPageViewController)
-        view.addSubview(detailLandingPageViewController.view)
+        view.addSubviews(detailLandingPageViewController.view)
         
         naviBar.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
@@ -93,5 +104,15 @@ extension DetailLandingPageVC: UIPageViewControllerDataSource, UIPageViewControl
             return nil
         }
         return pageDataViewControllers[nextIndex]
+    }
+    
+    /// 인디케이터 초기 값
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+    
+    /// 인디케이터를 표시할 페이지의 개수
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return self.pageDataViewControllers.count
     }
 }
