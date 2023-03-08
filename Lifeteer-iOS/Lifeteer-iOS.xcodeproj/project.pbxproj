@@ -10,6 +10,7 @@
 		A300B6C629B746D300514F9A /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A300B6C529B746D300514F9A /* GmarketSansLight.otf */; };
 		A300B6C829B747AB00514F9A /* StartLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300B6C729B747AB00514F9A /* StartLandingPageVC.swift */; };
 		A300B6CB29B7553D00514F9A /* StartLandingPageImage.json in Resources */ = {isa = PBXBuildFile; fileRef = A300B6CA29B7553D00514F9A /* StartLandingPageImage.json */; };
+		A300B6CF29B8D09100514F9A /* DetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300B6CE29B8D09100514F9A /* DetailLandingPageVC.swift */; };
 		A3531E032979280B0089F2F5 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E022979280B0089F2F5 /* Pretendard-Regular.otf */; };
 		A3531E052979281B0089F2F5 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E042979281B0089F2F5 /* Pretendard-Medium.otf */; };
 		A3531E07297928D30089F2F5 /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E06297928D30089F2F5 /* FontLiterals.swift */; };
@@ -80,6 +81,7 @@
 		A300B6C529B746D300514F9A /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansLight.otf; sourceTree = "<group>"; };
 		A300B6C729B747AB00514F9A /* StartLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLandingPageVC.swift; sourceTree = "<group>"; };
 		A300B6CA29B7553D00514F9A /* StartLandingPageImage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StartLandingPageImage.json; sourceTree = "<group>"; };
+		A300B6CE29B8D09100514F9A /* DetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A3531E022979280B0089F2F5 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		A3531E042979281B0089F2F5 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		A3531E06297928D30089F2F5 /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				A300B6C729B747AB00514F9A /* StartLandingPageVC.swift */,
+				A300B6CE29B8D09100514F9A /* DetailLandingPageVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 				A3F710B629790B1D00705FBF /* Publisher+UIControl.swift in Sources */,
 				A3F710D029790B3800705FBF /* Toast.swift in Sources */,
 				A3F710A829790B0100705FBF /* UIImage+.swift in Sources */,
+				A300B6CF29B8D09100514F9A /* DetailLandingPageVC.swift in Sources */,
 				A3F71017297905FB00705FBF /* AppDelegate.swift in Sources */,
 				A3F710A429790B0100705FBF /* UIColor+.swift in Sources */,
 				A3F710A129790B0100705FBF /* UITabBar+.swift in Sources */,

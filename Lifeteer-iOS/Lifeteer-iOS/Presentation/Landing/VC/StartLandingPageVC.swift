@@ -25,7 +25,7 @@ final class StartLandingPageVC: UIViewController {
         $0.textColor = .mainBlack
     }
     
-    private let searchIntoMindSet = CustomButton(title: "마음짓기 알아보기", type: .fillWithGreen)
+    private let searchIntoMindSetButton = CustomButton(title: "마음짓기 알아보기", type: .fillWithGreen)
     private let mainAnimationView: LottieAnimationView = .init(name: "StartLandingPageImage")
 
     override func viewDidLoad() {
@@ -33,12 +33,35 @@ final class StartLandingPageVC: UIViewController {
         setUI()
         setLayout()
         setAnimation()
+        setAddTarget()
+        setNavigationBar()
     }
 }
 
 // MARK: - Methods
 
 extension StartLandingPageVC {
+    private func setAddTarget() {
+        self.searchIntoMindSetButton.addTarget(self, action: #selector(searchIntoMindSetButtonDidTap), for: .touchUpInside)
+    }
+
+    private func pushToDetailLandingPageVC() {
+        let detailLandingPageVC = DetailLandingPageVC()
+        self.navigationController?.pushViewController(detailLandingPageVC, animated: true)
+    }
+    
+    private func setNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+}
+
+// MARK: - @objc Function
+
+extension StartLandingPageVC {
+    @objc
+    private func searchIntoMindSetButtonDidTap() {
+        pushToDetailLandingPageVC()
+    }
 }
 
 // MARK: - UI & Layout
@@ -49,14 +72,14 @@ extension StartLandingPageVC {
     }
     
     private func setLayout() {
-        view.addSubviews(titleLabel, searchIntoMindSet, mainAnimationView)
+        view.addSubviews(titleLabel, mainAnimationView, searchIntoMindSetButton)
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(113)
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(26)
         }
         
-        searchIntoMindSet.snp.makeConstraints { make in
+        searchIntoMindSetButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(15)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(48)
