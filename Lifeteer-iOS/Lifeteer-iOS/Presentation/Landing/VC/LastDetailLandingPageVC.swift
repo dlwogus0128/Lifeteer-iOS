@@ -11,7 +11,7 @@ class LastDetailLandingPageVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .magenta
         // Do any additional setup after loading the view.
     }
     
