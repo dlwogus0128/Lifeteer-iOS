@@ -29,6 +29,10 @@ final class ThirdDetailLandingPageVC: UIViewController {
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
         $0.attributedText = attrString
     }
+    
+    private let landingPageImageView = UIImageView().then {
+        $0.image = ImageLiterals.imgLandingPage3
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +49,14 @@ extension ThirdDetailLandingPageVC {
     }
     
     private func setLayout() {
-        view.addSubviews(subTitleLabel, titleLabel)
+        view.addSubviews(landingPageImageView, subTitleLabel, titleLabel)
+        
+        landingPageImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(18)
+            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(85)
+            make.height.equalTo(landingPageImageView.snp.width).multipliedBy(1.8)
+        }
         
         subTitleLabel.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(56)

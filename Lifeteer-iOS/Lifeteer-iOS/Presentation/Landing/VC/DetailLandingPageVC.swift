@@ -23,11 +23,12 @@ final class DetailLandingPageVC: UIViewController {
         return [FirstDetailLandingPageVC(), SecondDetailLandingPageVC(), ThirdDetailLandingPageVC(), LastDetailLandingPageVC()]
     }()
     private let detailLandingPageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-    private var pageControl: UIPageControl!
+    private var pageControl = UIPageControl()
     private let startMindSetButton = CustomButton(title: "마음짓기 시작하기", type: .fillWithGreen)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        removePageViewControllerBackground()
         setUI()
         setLayout()
         setFirstDetailLandingPageVC()
@@ -56,8 +57,18 @@ extension DetailLandingPageVC {
         pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = .disabledFill
         pageControl.currentPageIndicatorTintColor = .mainGreen
-        pageControl.backgroundColor = .white
+        pageControl.backgroundColor = .red
         pageControl.backgroundStyle = .minimal
+        
+        pageControl.transform = CGAffineTransform(scaleX: 2.0, y: 1.0)
+    }
+    
+    private func removePageViewControllerBackground() {
+        
+        /// 첫번째 UIScrollView를 찾아 그 배경을 제거
+        if let scrollView = detailLandingPageViewController.view.subviews.compactMap({ $0 as? UIScrollView }).first {
+            scrollView.backgroundColor = .white
+        }
     }
 }
 
@@ -68,7 +79,7 @@ extension DetailLandingPageVC {
 extension DetailLandingPageVC {
     private func setUI() {
         self.view.backgroundColor = .white
-        self.detailLandingPageViewController.view.backgroundColor = .mainBlack
+        self.detailLandingPageViewController.view.backgroundColor = .clear
     }
     
     private func setLayout() {
@@ -140,6 +151,5 @@ extension DetailLandingPageVC: UIPageViewControllerDataSource, UIPageViewControl
         } else {
             startMindSetButton.isHidden = true
         }
-
     }
 }

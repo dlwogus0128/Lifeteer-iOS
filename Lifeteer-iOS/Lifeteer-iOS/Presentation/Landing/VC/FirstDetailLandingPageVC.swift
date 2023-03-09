@@ -30,6 +30,10 @@ final class FirstDetailLandingPageVC: UIViewController {
         $0.attributedText = attrString
     }
 
+    private let landingPageImageView = UIImageView().then {
+        $0.image = ImageLiterals.imgLandingPage1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -45,7 +49,14 @@ extension FirstDetailLandingPageVC {
     }
     
     private func setLayout() {
-        view.addSubviews(subTitleLabel, titleLabel)
+        view.addSubviews(landingPageImageView, subTitleLabel, titleLabel)
+        
+        landingPageImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(18)
+            make.leading.equalToSuperview().inset(85)
+            make.trailing.equalToSuperview().inset(40)
+            make.height.equalTo(landingPageImageView.snp.width).multipliedBy(1.4)
+        }
         
         subTitleLabel.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(56)
@@ -56,5 +67,6 @@ extension FirstDetailLandingPageVC {
             make.bottom.equalTo(subTitleLabel.snp.top).offset(-13)
             make.centerX.equalToSuperview()
         }
+
     }
 }
