@@ -38,6 +38,10 @@ enum ImageLiterals {
     static var icRecordedWillFill: UIImage { .load(named: "ic_recorded_will_fill") }
     static var icRecordedWill: UIImage { .load(named: "ic_recorded_will") }
     static var icVisible: UIImage { .load(named: "ic_visible") }
+    static var imgLandingPage1: UIImage { .load(named: "img_LandingPage_1") }
+    static var imgLandingPage2: UIImage { .load(named: "img_LandingPage_2") }
+    static var imgLandingPage3: UIImage { .load(named: "img_LandingPage_3") }
+    
 }
 
 extension UIImage {

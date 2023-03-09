@@ -59,12 +59,17 @@ extension UIFont {
     @nonobjc class var b4: UIFont {
         return UIFont.font(.pretendardRegular, ofSize: 10)
     }
+    
+    @nonobjc class var landingPageTitleFont: UIFont {
+        return UIFont.font(.gMarketSansLight, ofSize: 20)
+    }
 }
 
 enum FontName: String {
     case pretendardMedium = "Pretendard-Medium"
     case pretendardRegular = "Pretendard-Regular"
     case pretendardBold = "Pretendard-Bold"
+    case gMarketSansLight = "GmarketSansLight"
 }
 
 extension UIFont {
