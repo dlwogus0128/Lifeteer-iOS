@@ -57,10 +57,8 @@ extension DetailLandingPageVC {
         pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = .disabledFill
         pageControl.currentPageIndicatorTintColor = .mainGreen
-        pageControl.backgroundColor = .red
+        pageControl.backgroundColor = .clear
         pageControl.backgroundStyle = .minimal
-        
-        pageControl.transform = CGAffineTransform(scaleX: 2.0, y: 1.0)
     }
     
     private func removePageViewControllerBackground() {

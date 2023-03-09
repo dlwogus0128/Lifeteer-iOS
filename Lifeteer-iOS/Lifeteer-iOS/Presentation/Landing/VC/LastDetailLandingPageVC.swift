@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Lottie
 
 final class LastDetailLandingPageVC: UIViewController {
     
@@ -30,10 +31,13 @@ final class LastDetailLandingPageVC: UIViewController {
         $0.attributedText = attrString
     }
 
+    private let mainAnimationView: LottieAnimationView = .init(name: "LastLandingPageImage")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setLayout()
+        setAnimation()
     }
 }
 
@@ -45,7 +49,7 @@ extension LastDetailLandingPageVC {
     }
     
     private func setLayout() {
-        view.addSubviews(subTitleLabel, titleLabel)
+        view.addSubviews(subTitleLabel, titleLabel, mainAnimationView)
         
         subTitleLabel.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(56)
@@ -56,5 +60,17 @@ extension LastDetailLandingPageVC {
             make.bottom.equalTo(subTitleLabel.snp.top).offset(-13)
             make.centerX.equalToSuperview()
         }
+        
+        mainAnimationView.snp.makeConstraints { make in
+            make.bottom.equalTo(titleLabel.snp.top).offset(-40)
+            make.leading.equalToSuperview().offset(-35)
+            make.trailing.equalToSuperview().offset(35)
+            make.height.equalTo(mainAnimationView.snp.width).multipliedBy(0.7)
+        }
+    }
+    
+    private func setAnimation() {
+        mainAnimationView.play()
+        mainAnimationView.loopMode = .loop
     }
 }
