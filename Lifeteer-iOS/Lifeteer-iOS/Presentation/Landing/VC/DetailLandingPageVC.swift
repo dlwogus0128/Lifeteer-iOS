@@ -12,6 +12,10 @@ import Then
 
 final class DetailLandingPageVC: UIViewController {
     
+    // MARK: - Properties
+    
+    var isLastPage: Bool = false
+        
     // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar(self, type: .backButton)
@@ -20,6 +24,8 @@ final class DetailLandingPageVC: UIViewController {
     }()
     private let detailLandingPageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     private var pageControl: UIPageControl!
+    private let startMindSetButton = CustomButton(title: "마음짓기 시작하기", type: .fillWithGreen)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -50,10 +56,12 @@ extension DetailLandingPageVC {
         pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = .disabledFill
         pageControl.currentPageIndicatorTintColor = .mainGreen
-        pageControl.backgroundColor = UIColor.clear
+        pageControl.backgroundColor = .white
         pageControl.backgroundStyle = .minimal
     }
 }
+
+// MARK: - @objc Function
 
 // MARK: - UI & Layout
 
@@ -76,7 +84,7 @@ extension DetailLandingPageVC {
         detailLandingPageViewController.view.snp.makeConstraints { make in
             make.top.equalTo(naviBar.snp.bottom).offset(66)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(165)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(100)
         }
         detailLandingPageViewController.didMove(toParent: self)
     }
@@ -114,5 +122,24 @@ extension DetailLandingPageVC: UIPageViewControllerDataSource, UIPageViewControl
     /// 인디케이터를 표시할 페이지의 개수
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return self.pageDataViewControllers.count
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        guard completed, let currentViewController = pageViewController.viewControllers?.first,
+        let currentIndex = pageDataViewControllers.firstIndex(of: currentViewController) else { return }
+
+        if currentIndex == pageDataViewControllers.count - 1 {
+            /// 현재 페이지 인덱스가 마지막 페이지 인덱스인 경우
+            startMindSetButton.isHidden = false
+            view.addSubview(startMindSetButton)
+            startMindSetButton.snp.makeConstraints { make in
+                make.bottom.equalTo(view.safeAreaLayoutGuide).inset(15)
+                make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+                make.height.equalTo(48)
+            }
+        } else {
+            startMindSetButton.isHidden = true
+        }
+
     }
 }

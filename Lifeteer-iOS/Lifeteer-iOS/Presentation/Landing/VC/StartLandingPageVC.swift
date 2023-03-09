@@ -22,7 +22,6 @@ final class StartLandingPageVC: UIViewController {
         paragraphStyle.lineSpacing = 12
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
         $0.attributedText = attrString
-        $0.textColor = .mainBlack
     }
     
     private let searchIntoMindSetButton = CustomButton(title: "마음짓기 알아보기", type: .fillWithGreen)
