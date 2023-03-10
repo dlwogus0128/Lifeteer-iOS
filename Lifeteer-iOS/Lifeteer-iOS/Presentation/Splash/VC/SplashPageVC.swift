@@ -7,23 +7,62 @@
 
 import UIKit
 
-class SplashPageVC: UIViewController {
+import SnapKit
+import Then
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+final class SplashPageVC: UIViewController {
+    
+    // MARK: - UI Components
+    private let logoImageView = UIImageView().then {
+        $0.image = ImageLiterals.icMindsetBI
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private let subTitleLabel = UILabel().then {
+        $0.text = "마음을 정리하는 시간,"
+        $0.font = .b1
+        $0.textColor = .mainGreen
     }
-    */
+    
+    private let titleLabel = UILabel().then {
+        $0.text = "마음짓기"
+        $0.font = .h0
+        $0.textColor = .mainGreen
+    }
 
+    // MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUI()
+        setLayout()
+    }
 }
+
+// MARK: - UI & Layout
+
+extension SplashPageVC {
+    private func setUI() {
+        view.backgroundColor = .white
+    }
+    
+    private func setLayout() {
+        view.addSubviews(logoImageView, subTitleLabel, titleLabel)
+        
+        logoImageView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(305)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(136)
+            make.height.equalTo(logoImageView.snp.width).multipliedBy(0.7)
+        }
+        
+        subTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(logoImageView.snp.bottom).offset(36)
+            make.centerX.equalToSuperview()
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(subTitleLabel.snp.bottom).offset(5)
+            make.centerX.equalToSuperview()
+        }
+    }
+}
+
