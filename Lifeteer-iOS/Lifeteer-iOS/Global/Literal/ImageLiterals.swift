@@ -26,6 +26,7 @@ enum ImageLiterals {
     static var icImagePlus: UIImage { .load(named: "ic_image_plus") }
     static var icInfo: UIImage { .load(named: "ic_info") }
     static var icInvisible: UIImage { .load(named: "ic_invisible") }
+    static var icKakaoClose: UIImage { .load(named: "ic_kakao_close") }
     static var icLetterFill: UIImage { .load(named: "ic_letter_fill") }
     static var icLetter: UIImage { .load(named: "ic_letter") }
     static var icMenu: UIImage { .load(named: "ic_menu") }
