@@ -35,6 +35,24 @@ final class SplashPageVC: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        setNavigationBar()
+        checkDidSignIn()
+    }
+}
+
+// MARK: - Methods
+
+extension SplashPageVC {
+    private func checkDidSignIn() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.pushToTabBarController()
+        }
+    }
+    
+    private func pushToTabBarController() {
+        let tabBarController = TabBarController()
+        guard let window = self.view.window else { return }
+        ViewControllerUtils.setRootViewController(window: window, viewController: tabBarController, withAnimation: true)
     }
 }
 
@@ -43,6 +61,10 @@ final class SplashPageVC: UIViewController {
 extension SplashPageVC {
     private func setUI() {
         view.backgroundColor = .white
+    }
+    
+    private func setNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     private func setLayout() {
@@ -65,4 +87,3 @@ extension SplashPageVC {
         }
     }
 }
-
