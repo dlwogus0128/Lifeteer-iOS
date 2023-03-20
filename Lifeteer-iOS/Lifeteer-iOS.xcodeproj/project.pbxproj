@@ -33,6 +33,7 @@
 		A3531E2029796FB30089F2F5 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E1F29796FB30089F2F5 /* CustomNavigationBar.swift */; };
 		A3531E2429798B370089F2F5 /* UserMenuMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E2329798B370089F2F5 /* UserMenuMainVC.swift */; };
 		A3531E2629799C2B0089F2F5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E2529799C2B0089F2F5 /* CustomButton.swift */; };
+		A3E55BA229C8356C0000D85D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E55BA129C8356C0000D85D /* SignInVC.swift */; };
 		A3F71017297905FB00705FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F71016297905FB00705FBF /* AppDelegate.swift */; };
 		A3F71019297905FB00705FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F71018297905FB00705FBF /* SceneDelegate.swift */; };
 		A3F71020297905FC00705FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F7101F297905FC00705FBF /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		A3531E1F29796FB30089F2F5 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		A3531E2329798B370089F2F5 /* UserMenuMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuMainVC.swift; sourceTree = "<group>"; };
 		A3531E2529799C2B0089F2F5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A3E55BA129C8356C0000D85D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		A3F71013297905FB00705FBF /* Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F71016297905FB00705FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3F71018297905FB00705FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 		A3F710552979096D00705FBF /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A3E55BA129C8356C0000D85D /* SignInVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				A300B6E529BAEC3E00514F9A /* SplashPageVC.swift in Sources */,
 				A3531E1929794DCE0089F2F5 /* BucketListMainVC.swift in Sources */,
 				A3F710A229790B0100705FBF /* UIDevice+.swift in Sources */,
+				A3E55BA229C8356C0000D85D /* SignInVC.swift in Sources */,
 				A3F710D729790B3800705FBF /* calculatePastTime.swift in Sources */,
 				A3F7109F29790B0100705FBF /* UIButton+.swift in Sources */,
 				A3F710A029790B0100705FBF /* UIViewController+.swift in Sources */,
