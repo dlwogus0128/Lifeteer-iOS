@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UINavigationController(rootViewController: StartLandingPageVC())
+        let nav = UINavigationController(rootViewController: SplashPageVC())
+        window.rootViewController = nav
         self.window = window
         window.makeKeyAndVisible()
     }
