@@ -29,12 +29,13 @@ final class SignInVC: UIViewController {
         $0.textColor = .mainGreen
     }
     
-    private let kakaoLoginButton = UIButton(type: .system).then {
+    private lazy var kakaoLoginButton = UIButton(type: .system).then {
         $0.setTitle("카카오톡으로 시작하기", for: .normal)
         $0.titleLabel?.font = .h6
         $0.setTitleColor(.mainBlack, for: .normal)
         $0.setBackgroundColor(UIColor(hex: "FEE600"), for: .normal)
         $0.layer.cornerRadius = 7
+        $0.addTarget(self, action: #selector(touchUpKakaoLoginButton), for: .touchUpInside)
     }
     
     private let appleLoginButton = UIButton(type: .system).then {
@@ -44,11 +45,31 @@ final class SignInVC: UIViewController {
         $0.setBackgroundColor(.mainBlack, for: .normal)
         $0.layer.cornerRadius = 7
     }
+    
+    // MARK: - View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setLayout()
+    }
+}
+
+// MARK: - @objc Methods
+
+extension SignInVC {
+    @objc func touchUpKakaoLoginButton() {
+        pushToSignInKaKaoDetailVC()
+    }
+}
+
+// MARK: - Methods
+
+extension SignInVC {
+    private func pushToSignInKaKaoDetailVC() {
+        let signInKaKaoDetailVC = SignInKaKaoDetailVC()
+        signInKaKaoDetailVC.modalPresentationStyle = .overFullScreen
+        self.present(signInKaKaoDetailVC, animated: false)
     }
 }
 
