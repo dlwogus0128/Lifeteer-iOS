@@ -40,7 +40,8 @@ final class SignInKaKaoDetailVC: UIViewController {
     
     private let loginLabel = UILabel().then {
         $0.text = "Login"
-        $0.font = 
+        $0.font = .hLogin
+        $0.textColor = .white
     }
     
     // MARK: - View Life Cycle
@@ -80,7 +81,7 @@ extension SignInKaKaoDetailVC {
     }
     
     private func setLayout() {
-        view.addSubviews(closeButton, kakaoSimpleLoginButton, kakaoOtherAccountLoginButton)
+        view.addSubviews(closeButton, kakaoSimpleLoginButton, kakaoOtherAccountLoginButton, loginLabel)
         
         closeButton.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(60)
@@ -98,6 +99,11 @@ extension SignInKaKaoDetailVC {
             make.bottom.equalTo(kakaoOtherAccountLoginButton.snp.top).offset(-12)
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(48)
+        }
+        
+        loginLabel.snp.makeConstraints { make in
+            make.bottom.equalTo(kakaoSimpleLoginButton.snp.top).offset(-24)
+            make.centerX.equalToSuperview()
         }
     }
 }
