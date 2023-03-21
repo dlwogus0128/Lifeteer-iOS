@@ -19,14 +19,10 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
     
     // MARK: - UI Components
     
-    private lazy var naviBar = CustomNavigationBar(self, type: .menuButtonWithBI).then {
+    private lazy var naviBar = CustomNavigationBar(self, type: .onlyBI).then {
         $0.layer.applyShadow(alpha: 0.10, y: 10, blur: 21)
     }
-    private let monthLabel = UILabel().then {
-        $0.textColor = .mainBlack
-        $0.font = .b1
-        $0.text = "2023년 1월"
-    }
+    
     private var mindSetCalendar: FSCalendar! = FSCalendar(frame: .zero)
     private let todayMindSetLabel = UILabel().then {
         $0.text = "오늘의 마음짓기"
@@ -139,7 +135,7 @@ extension MindSetHomeVC {
     }
 
     private func setLayout() {
-        view.addSubviews(naviBar, monthLabel, mindSetCalendar,
+        view.addSubviews(naviBar, mindSetCalendar,
                          todayMindSetLabel, viewHistoryButton, writeMindSetContainer, saveButton)
         
         naviBar.snp.makeConstraints { make in
@@ -148,13 +144,8 @@ extension MindSetHomeVC {
             make.height.equalTo(98)
         }
         
-        monthLabel.snp.makeConstraints { make in
-            make.top.equalTo(naviBar.snp.bottom).offset(20)
-            make.leading.equalTo(20)
-        }
-        
         mindSetCalendar.snp.makeConstraints { make in
-            make.top.equalTo(monthLabel.snp.bottom).offset(14)
+            make.top.equalTo(naviBar.snp.bottom).offset(14)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(250)
         }
