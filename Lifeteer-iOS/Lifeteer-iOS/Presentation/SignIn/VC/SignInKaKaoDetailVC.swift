@@ -38,6 +38,11 @@ final class SignInKaKaoDetailVC: UIViewController {
         $0.addTarget(self, action: #selector(touchUpCloseImageView), for: .touchUpInside)
     }
     
+    private let loginLabel = UILabel().then {
+        $0.text = "Login"
+        $0.font = 
+    }
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
