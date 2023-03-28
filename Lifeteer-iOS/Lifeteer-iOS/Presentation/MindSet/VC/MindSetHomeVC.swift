@@ -9,9 +9,8 @@ import UIKit
 
 import SnapKit
 import Then
-import FSCalendar
 
-final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+final class MindSetHomeVC: UIViewController {
     
     // MARK: - Properties
     var height = 47
@@ -86,7 +85,15 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
         $0.delegate = self
     }
     
-    private let saveButton = CustomButton(title: "마음짓기 저장하기", type: .fillWithGreen)
+    private let countByteLabel = UILabel().then {
+        $0.text = "0 / 300 byte"
+        $0.font = .b4
+        $0.textColor = .disabledText
+    }
+    
+    private let saveButton = CustomButton(title: "마음짓기 저장하기", type: .fillWithGreen).then {
+        $0.isEnabled = false
+    }
     
     private let cantFixMindSetGuideLabel = UILabel().then {
         $0.text = "마음짓기를 저장하면 수정이 불가해요. 신중하게 적어주세요."
@@ -101,6 +108,7 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
         self.navigationController?.isNavigationBarHidden = true
         setUI()
         setLayout()
+        setDelegate()
     }
 }
 
@@ -113,7 +121,18 @@ extension MindSetHomeVC {
 // MARK: - Methods
 
 extension MindSetHomeVC {
+    private func setDelegate() {
+        self.answerTextView.delegate = self
+    }
     
+    private func completionButton(isOn: Bool) {
+        switch isOn {
+        case true:
+            self.saveButton.isEnabled = true
+        case false:
+            self.saveButton.isEnabled = false
+        }
+    }
 }
 
 // MARK: - UI & Layout
@@ -180,7 +199,7 @@ extension MindSetHomeVC {
     
     private func setMindSetContentLayout() {
         writeMindSetContainer.addSubviews(questionNumberLabel, horizontalDividingLine,
-                                          selectedDateLabel, questionNumberLabel, questionTextView, answerTextView)
+                                          selectedDateLabel, questionNumberLabel, questionTextView, answerTextView, countByteLabel)
         
         questionNumberLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
@@ -208,6 +227,11 @@ extension MindSetHomeVC {
             make.top.equalTo(questionTextView.snp.bottom).offset(25)
             make.leading.trailing.bottom.equalToSuperview().inset(16)
         }
+                
+        countByteLabel.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(30)
+            make.trailing.equalToSuperview().inset(30)
+        }
     }
 }
 
@@ -219,6 +243,10 @@ extension MindSetHomeVC: UITextViewDelegate {
             textView.text = nil
             textView.textColor = .mainBlack
         }
+        
+        if textView.text.count > 1 {
+            self.saveButton.isEnabled = true
+        }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -227,4 +255,29 @@ extension MindSetHomeVC: UITextViewDelegate {
             textView.textColor = .disabledText
         }
     }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = ""
+            self.completionButton(isOn: false)
+        } else {
+            self.completionButton(isOn: true)
+        }
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let currentText = textView.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        
+        let changedText = currentText.replacingCharacters(in: stringRange, with: text)
+        
+        countByteLabel.text = "\(changedText.count) / 300 byte"
+        
+        if Int(changedText) ?? 0 > 1 {
+            self.saveButton.isEnabled = true
+        }
+        
+        return changedText.count <= 299
+    }
+    
 }
