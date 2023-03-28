@@ -16,6 +16,7 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
     // MARK: - Properties
     var height = 47
     var selectedDate: Date = Date()
+    let textViewPlaceholder = "마음을 입력해주세요."
     
     // MARK: - UI Components
     
@@ -23,14 +24,28 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
         $0.layer.applyShadow(alpha: 0.10, y: 10, blur: 21)
     }
     
-    private var mindSetCalendar: FSCalendar! = FSCalendar(frame: .zero)
     private let todayMindSetLabel = UILabel().then {
         $0.text = "오늘의 마음짓기"
-        $0.font = .h1
+        $0.font = .h0
         $0.textColor = .mainBlack
     }
     
-    private let viewHistoryButton = CustomButton(title: "기록 보기", type: .borderWithoutBGC)
+    private let basketImageView = UIImageView().then {
+        $0.image = ImageLiterals.icBasket
+    }
+    
+    private let helloUserLabel = UILabel().then {
+        $0.text = "귀여운라이언 님, 활기찬 아침입니다!"
+        $0.font = .h6
+        $0.textColor = .mainBlack
+    }
+    
+    private let suggestMindSetLabel = UILabel().then {
+        $0.text = "오늘의 마음을 지어보세요."
+        $0.font = .b2
+        $0.textColor = .mainGreen
+    }
+    
     private let writeMindSetContainer = UIView().then {
         $0.layer.cornerRadius = 20
         $0.layer.applyShadow(alpha: 0.10, y: 10, blur: 21)
@@ -47,7 +62,7 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
         $0.text = "혹시 닉네임(별명)이 있나요? \n있다면, 그것의 의미는 무엇인가요?"
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 8
-        let attributedString = NSMutableAttributedString(string: $0.text, attributes: [.font: UIFont.h1, .foregroundColor: UIColor.mainBlack.withAlphaComponent(0.8)])
+        let attributedString = NSMutableAttributedString(string: $0.text, attributes: [.font: UIFont.h1, .foregroundColor: UIColor.mainBlack])
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attributedString.length))
         $0.attributedText = attributedString
         $0.isScrollEnabled = false
@@ -61,14 +76,23 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
         $0.textColor = .disabledText
     }
     
-    let answerTextView = UITextView().then {
+    private lazy var answerTextView = UITextView().then {
         $0.font = .b1
-        $0.tintColor = .mainBlack.withAlphaComponent(0.8)
+        $0.tintColor = UIColor(hex: "F4F4F4")
         $0.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 35, right: 16)
         $0.layer.cornerRadius = 20
+        $0.text = self.textViewPlaceholder
+        $0.textColor = .disabledText
+        $0.delegate = self
     }
     
     private let saveButton = CustomButton(title: "마음짓기 저장하기", type: .fillWithGreen)
+    
+    private let cantFixMindSetGuideLabel = UILabel().then {
+        $0.text = "마음짓기를 저장하면 수정이 불가해요. 신중하게 적어주세요."
+        $0.font = .b3
+        $0.textColor = .mainGreen
+    }
 
     // MARK: - View Life Cycle
     
@@ -76,29 +100,20 @@ final class MindSetHomeVC: UIViewController, FSCalendarDelegate, FSCalendarDataS
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         setUI()
-        setCalendar()
         setLayout()
-        setDelegate()
-        setDataSource()
-        register()
     }
+}
+
+// MARK: - @objc Function
+
+extension MindSetHomeVC {
+    
 }
 
 // MARK: - Methods
 
 extension MindSetHomeVC {
     
-    private func setDelegate() {
-        mindSetCalendar.delegate = self
-    }
-    
-    private func setDataSource() {
-        mindSetCalendar.dataSource = self
-    }
-    
-    private func register() {
-        mindSetCalendar.register(FSCalendarCell.self, forCellReuseIdentifier: "Cell")
-    }
 }
 
 // MARK: - UI & Layout
@@ -110,70 +125,60 @@ extension MindSetHomeVC {
         self.horizontalDividingLine.backgroundColor = .disabledFill
         self.answerTextView.backgroundColor = .disabledFill.withAlphaComponent(0.8)
     }
-    
-    private func setCalendar() {
-        mindSetCalendar.do {
-            $0.scope = .week
-            $0.calendarHeaderView.isHidden = false
-            $0.scrollEnabled = false
-            $0.headerHeight = 0
-            
-            $0.appearance.todaySelectionColor = .none
-            $0.appearance.todayColor = .none
-            $0.appearance.titleTodayColor = .mainBlack.withAlphaComponent(0.8)
-            
-            $0.weekdayHeight = 18
-            $0.calendarWeekdayView.fs_height = 0
-            
-            $0.appearance.selectionColor = .mainGreen.withAlphaComponent(0.2)
-            $0.appearance.titleFont = .b0
-            $0.appearance.weekdayFont = .b3
-            $0.appearance.weekdayTextColor = .disabledText
-            $0.appearance.titleDefaultColor = .mainBlack.withAlphaComponent(0.8)
-            $0.appearance.borderRadius = 0.2.adjusted
-        }
-    }
 
     private func setLayout() {
-        view.addSubviews(naviBar, mindSetCalendar,
-                         todayMindSetLabel, viewHistoryButton, writeMindSetContainer, saveButton)
+        view.addSubviews(naviBar, todayMindSetLabel, basketImageView, helloUserLabel,
+                         suggestMindSetLabel, writeMindSetContainer, saveButton,
+                         cantFixMindSetGuideLabel)
         
         naviBar.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(98)
         }
-        
-        mindSetCalendar.snp.makeConstraints { make in
-            make.top.equalTo(naviBar.snp.bottom).offset(14)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
-            make.height.equalTo(250)
-        }
-        
-        viewHistoryButton.snp.makeConstraints { make in
-            make.top.equalTo(mindSetCalendar.snp.bottom).offset(58)
-            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
-            make.width.equalTo(98)
-            make.height.equalTo(27)
-        }
-        
+
         todayMindSetLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(viewHistoryButton.snp.centerY)
+            make.top.equalTo(naviBar.snp.bottom).offset(23)
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(20)
         }
         
+        basketImageView.snp.makeConstraints { make in
+            make.top.equalTo(todayMindSetLabel.snp.bottom).offset(20)
+            make.leading.equalTo(todayMindSetLabel.snp.leading)
+            make.width.height.equalTo(48)
+        }
+        
+        helloUserLabel.snp.makeConstraints { make in
+            make.top.equalTo(basketImageView.snp.top).inset(2)
+            make.leading.equalTo(basketImageView.snp.trailing).offset(20)
+        }
+        
+        suggestMindSetLabel.snp.makeConstraints { make in
+            make.bottom.equalTo(basketImageView.snp.bottom).inset(3)
+            make.leading.equalTo(helloUserLabel.snp.leading)
+        }
+        
         saveButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(114)
+            make.bottom.equalToSuperview().inset(110)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(48)
         }
         
-        writeMindSetContainer.snp.makeConstraints { make in
-            make.top.equalTo(viewHistoryButton.snp.bottom).offset(19)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
-            make.bottom.equalTo(saveButton.snp.top).offset(-12)
+        cantFixMindSetGuideLabel.snp.makeConstraints { make in
+            make.bottom.equalTo(saveButton.snp.top).offset(-10)
+            make.centerX.equalToSuperview()
         }
         
+        writeMindSetContainer.snp.makeConstraints { make in
+            make.top.equalTo(basketImageView.snp.bottom).offset(19)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+            make.bottom.equalTo(cantFixMindSetGuideLabel.snp.top).offset(-26)
+        }
+        
+        setMindSetContentLayout()
+    }
+    
+    private func setMindSetContentLayout() {
         writeMindSetContainer.addSubviews(questionNumberLabel, horizontalDividingLine,
                                           selectedDateLabel, questionNumberLabel, questionTextView, answerTextView)
         
@@ -195,33 +200,31 @@ extension MindSetHomeVC {
         }
         
         questionTextView.snp.makeConstraints { make in
-            make.top.equalTo(horizontalDividingLine.snp.bottom).offset(24)
+            make.top.equalTo(horizontalDividingLine.snp.bottom).offset(18)
             make.leading.trailing.equalToSuperview().inset(16)
         }
         
         answerTextView.snp.makeConstraints { make in
-            make.top.equalTo(questionTextView.snp.bottom).offset(32)
+            make.top.equalTo(questionTextView.snp.bottom).offset(25)
             make.leading.trailing.bottom.equalToSuperview().inset(16)
         }
     }
 }
 
-extension MindSetHomeVC {
-    
-    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-        calendar.snp.updateConstraints { make in
-            make.height.equalTo(bounds.height)
+// MARK: - UITextViewDelegate
+
+extension MindSetHomeVC: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == textViewPlaceholder {
+            textView.text = nil
+            textView.textColor = .mainBlack
         }
-        self.view.layoutIfNeeded()
-    }
-        
-    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
-        let cell = calendar.dequeueReusableCell(withIdentifier: "Cell", for: date, at: position)
-        cell.fs_height = 50
-        return cell
     }
     
-    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleSelectionColorFor date: Date) -> UIColor? {
-        return .mainBlack.withAlphaComponent(0.8)
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            textView.text = textViewPlaceholder
+            textView.textColor = .disabledText
+        }
     }
 }
