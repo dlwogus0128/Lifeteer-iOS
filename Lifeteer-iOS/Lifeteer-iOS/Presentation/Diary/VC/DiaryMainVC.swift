@@ -46,6 +46,10 @@ final class DiaryMainVC: UIViewController, FSCalendarDelegate, FSCalendarDataSou
         $0.sizeToFit()
     }
     
+    private lazy var diaryAddButton = UIButton(type: .custom).then {
+        $0.setImage(ImageLiterals.icAdd, for: .normal)
+    }
+    
     var diaryCalendar: FSCalendar! = FSCalendar(frame: .zero)
 
     // MARK: - View Life Cycle
@@ -109,7 +113,7 @@ extension DiaryMainVC {
     }
     
     private func setLayout() {
-        view.addSubviews(naviBar, monthLabel, diaryCalendar, contentView, textBubbleImageView, diarySuggestionLabel)
+        view.addSubviews(naviBar, monthLabel, diaryCalendar, contentView, textBubbleImageView, diarySuggestionLabel, diaryAddButton)
         
         naviBar.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -142,6 +146,11 @@ extension DiaryMainVC {
         diarySuggestionLabel.snp.makeConstraints { make in
             make.top.equalTo(textBubbleImageView.snp.bottom).offset(18)
             make.centerX.equalToSuperview()
+        }
+        
+        diaryAddButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-25)
+            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
     }
 }

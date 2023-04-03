@@ -9,6 +9,7 @@ import UIKit
 
 enum ImageLiterals {
     // icon
+    static var icAdd: UIImage { .load(named: "ic_add") }
     static var icAlertCircle: UIImage { .load(named: "ic_alert_circle") }
     static var icBack: UIImage { .load(named: "ic_back") }
     static var icBasket: UIImage { .load(named: "ic_basket") }
