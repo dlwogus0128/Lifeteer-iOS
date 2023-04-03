@@ -54,14 +54,23 @@ final class DiaryMainVC: UIViewController, FSCalendarDelegate, FSCalendarDataSou
 
     // MARK: - View Life Cycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
         setUI()
         setLayout()
         setDelegate()
         setDataSource()
         register()
         setCalendar()
+        setAddTarget()
+    }
+}
+
+// MARK: - @objc Function
+
+extension DiaryMainVC {
+    @objc func pushToWritingDiaryVC() {
+        let writingDiaryVC = WritingDiaryVC()
+        self.navigationController?.pushViewController(writingDiaryVC, animated: true)
     }
 }
 
@@ -79,6 +88,10 @@ extension DiaryMainVC {
     private func register() {
         diaryCalendar.register(FSCalendarCell.self, forCellReuseIdentifier: "Cell")
     }
+    
+    private func setAddTarget() {
+        self.diaryAddButton.addTarget(self, action: #selector(pushToWritingDiaryVC), for: .touchUpInside)
+    }
 }
 
 // MARK: - Layout Helpers
@@ -87,6 +100,7 @@ extension DiaryMainVC {
     private func setUI() {
         view.backgroundColor = .mainBackground
         contentView.backgroundColor = .textbox
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     private func setCalendar() {
@@ -129,11 +143,11 @@ extension DiaryMainVC {
         diaryCalendar.snp.makeConstraints { make in
             make.top.equalTo(monthLabel.snp.bottom).offset(20)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
-            make.height.equalTo(400)
+            make.height.equalTo(300)
         }
         
         contentView.snp.makeConstraints { make in
-            make.top.equalTo(diaryCalendar.snp.bottom).offset(60)
+            make.top.equalTo(diaryCalendar.snp.bottom).inset(170)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(304)
         }
@@ -158,12 +172,12 @@ extension DiaryMainVC {
 // MARK: - FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance
     
 extension DiaryMainVC {
-    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-            calendar.snp.updateConstraints { make in
-            make.height.equalTo(bounds.height)
-        }
-        self.view.layoutIfNeeded()
-    }
+//    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
+//            calendar.snp.updateConstraints { make in
+//            make.height.equalTo(bounds.height)
+//        }
+//        self.view.layoutIfNeeded()
+//    }
         
     func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
         let cell = calendar.dequeueReusableCell(withIdentifier: "Cell", for: date, at: position)
