@@ -8,6 +8,10 @@
 import UIKit
 
 extension UIFont {
+    @nonobjc class var hLogin: UIFont {
+        return UIFont.font(.pretendardBold, ofSize: 24)
+    }
+    
     @nonobjc class var h0: UIFont {
         return UIFont.font(.pretendardBold, ofSize: 20)
     }

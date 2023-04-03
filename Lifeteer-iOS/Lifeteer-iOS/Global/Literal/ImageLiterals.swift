@@ -11,6 +11,7 @@ enum ImageLiterals {
     // icon
     static var icAlertCircle: UIImage { .load(named: "ic_alert_circle") }
     static var icBack: UIImage { .load(named: "ic_back") }
+    static var icBasket: UIImage { .load(named: "ic_basket") }
     static var icBucketListFill: UIImage { .load(named: "ic_bucket_list_fill") }
     static var icBucketList: UIImage { .load(named: "ic_bucket_list") }
     static var icCheck: UIImage { .load(named: "ic_check") }
