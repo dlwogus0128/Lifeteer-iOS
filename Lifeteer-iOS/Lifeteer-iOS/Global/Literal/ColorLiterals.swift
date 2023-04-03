@@ -20,6 +20,10 @@ extension UIColor {
         return UIColor(hex: "#FFFFFF")
     }
     
+    static var textbox: UIColor {
+        return UIColor(hex: "#F6F6F6")
+    }
+    
     static var mainBlack: UIColor {
         return UIColor(hex: "#232323")
     }

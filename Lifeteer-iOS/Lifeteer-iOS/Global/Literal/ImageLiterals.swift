@@ -39,6 +39,7 @@ enum ImageLiterals {
     static var icRecordSort: UIImage { .load(named: "ic_record_sort") }
     static var icRecordedWillFill: UIImage { .load(named: "ic_recorded_will_fill") }
     static var icRecordedWill: UIImage { .load(named: "ic_recorded_will") }
+    static var icTextBubble: UIImage { .load(named: "ic_text_bubble") }
     static var icVisible: UIImage { .load(named: "ic_visible") }
     static var imgLandingPage1: UIImage { .load(named: "img_LandingPage_1") }
     static var imgLandingPage2: UIImage { .load(named: "img_LandingPage_2") }
