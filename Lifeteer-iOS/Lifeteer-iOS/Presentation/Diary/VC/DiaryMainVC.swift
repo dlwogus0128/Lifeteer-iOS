@@ -7,22 +7,41 @@
 
 import UIKit
 
-class DiaryMainVC: UIViewController {
+import SnapKit
+import Then
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .mainBackground
-        // Do any additional setup after loading the view.
+final class DiaryMainVC: UIViewController {
+    
+    // MARK: - UI Components
+    
+    private lazy var naviBar = CustomNavigationBar(self, type: .onlyTitle).then {
+        $0.setTitle("일기")
+        $0.layer.applyShadow(alpha: 0.10, y: 10, blur: 21)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUI()
+        setLayout()
     }
-    */
+}
 
+// MARK: - Layout Helpers
+
+extension DiaryMainVC {
+    private func setUI() {
+        view.backgroundColor = .mainBackground
+    }
+    
+    private func setLayout() {
+        view.addSubviews(naviBar)
+        
+        naviBar.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(98)
+        }
+    }
 }
