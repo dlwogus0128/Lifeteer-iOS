@@ -1065,8 +1065,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.6.2;
 			};
 		};
 		A3F710302979063F00705FBF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
