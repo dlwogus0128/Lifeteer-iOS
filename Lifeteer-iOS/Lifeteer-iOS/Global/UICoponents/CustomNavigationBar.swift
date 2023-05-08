@@ -18,6 +18,7 @@ enum NaviType {
     case menuButtonWithBI // 메뉴 버튼 + BI
     case buttonsWithTitle // 뒤로가기 버튼 + 중앙 타이틀 + 메뉴 버튼
     case onlyBI // BI만 존재
+    case onlyTitle // Title만 존재
 }
 
 final class CustomNavigationBar: UIView {
@@ -143,6 +144,8 @@ extension CustomNavigationBar {
             backButton.setImage(ImageLiterals.icBack, for: .normal)
         case .onlyBI:
             mindSetBIImageView.image = ImageLiterals.icMindsetBI
+        case .onlyTitle:
+            setTitleUI()
         }
     }
     
@@ -160,6 +163,8 @@ extension CustomNavigationBar {
             setButtonsWithTitleLayout()
         case .onlyBI:
             setOnlyBILayout()
+        case .onlyTitle:
+            setOnlyTitleLayout()
         }
     }
     
@@ -262,6 +267,15 @@ extension CustomNavigationBar {
             make.bottom.equalToSuperview().inset(11)
             make.height.equalTo(31)
             make.width.equalTo(43)
+        }
+    }
+    
+    private func setOnlyTitleLayout() {
+        self.addSubview(centerTitleLabel)
+        
+        centerTitleLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(12)
         }
     }
 }

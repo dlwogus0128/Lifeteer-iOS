@@ -17,6 +17,8 @@
 		A300B6D929B8E2F800514F9A /* LastDetailLandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300B6D829B8E2F800514F9A /* LastDetailLandingPageVC.swift */; };
 		A300B6E129BA447200514F9A /* LastLandingPageImage.json in Resources */ = {isa = PBXBuildFile; fileRef = A300B6E029BA447200514F9A /* LastLandingPageImage.json */; };
 		A300B6E529BAEC3E00514F9A /* SplashPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300B6E429BAEC3E00514F9A /* SplashPageVC.swift */; };
+		A32E81BF29DAB78200DBAF66 /* LTTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32E81BE29DAB78200DBAF66 /* LTTimeFormatter.swift */; };
+		A32E81C129DAC5A200DBAF66 /* WritingDiaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32E81C029DAC5A200DBAF66 /* WritingDiaryVC.swift */; };
 		A3531E032979280B0089F2F5 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E022979280B0089F2F5 /* Pretendard-Regular.otf */; };
 		A3531E052979281B0089F2F5 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3531E042979281B0089F2F5 /* Pretendard-Medium.otf */; };
 		A3531E07297928D30089F2F5 /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E06297928D30089F2F5 /* FontLiterals.swift */; };
@@ -96,6 +98,8 @@
 		A300B6D829B8E2F800514F9A /* LastDetailLandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDetailLandingPageVC.swift; sourceTree = "<group>"; };
 		A300B6E029BA447200514F9A /* LastLandingPageImage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LastLandingPageImage.json; sourceTree = "<group>"; };
 		A300B6E429BAEC3E00514F9A /* SplashPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageVC.swift; sourceTree = "<group>"; };
+		A32E81BE29DAB78200DBAF66 /* LTTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LTTimeFormatter.swift; path = "Lifeteer-iOS/Global/UICoponents/LTTimeFormatter.swift"; sourceTree = SOURCE_ROOT; };
+		A32E81C029DAC5A200DBAF66 /* WritingDiaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingDiaryVC.swift; sourceTree = "<group>"; };
 		A3531E022979280B0089F2F5 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		A3531E042979281B0089F2F5 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		A3531E06297928D30089F2F5 /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
@@ -578,6 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				A3531E1A29794DDE0089F2F5 /* DiaryMainVC.swift */,
+				A32E81C029DAC5A200DBAF66 /* WritingDiaryVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -651,6 +656,7 @@
 		A3F7106A29790A1600705FBF /* LTUtils */ = {
 			isa = PBXGroup;
 			children = (
+				A32E81BE29DAB78200DBAF66 /* LTTimeFormatter.swift */,
 			);
 			path = LTUtils;
 			sourceTree = "<group>";
@@ -804,6 +810,8 @@
 				A300B6CF29B8D09100514F9A /* DetailLandingPageVC.swift in Sources */,
 				A3F71017297905FB00705FBF /* AppDelegate.swift in Sources */,
 				A3F710A429790B0100705FBF /* UIColor+.swift in Sources */,
+				A32E81BF29DAB78200DBAF66 /* LTTimeFormatter.swift in Sources */,
+				A32E81C129DAC5A200DBAF66 /* WritingDiaryVC.swift in Sources */,
 				A3F710A129790B0100705FBF /* UITabBar+.swift in Sources */,
 				A3F71019297905FB00705FBF /* SceneDelegate.swift in Sources */,
 				A3F710AE29790B1200705FBF /* String+.swift in Sources */,
@@ -1057,8 +1065,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.6.2;
 			};
 		};
 		A3F710302979063F00705FBF /* XCRemoteSwiftPackageReference "SnapKit" */ = {

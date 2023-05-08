@@ -9,6 +9,7 @@ import UIKit
 
 enum ImageLiterals {
     // icon
+    static var icAdd: UIImage { .load(named: "ic_add") }
     static var icAlertCircle: UIImage { .load(named: "ic_alert_circle") }
     static var icBack: UIImage { .load(named: "ic_back") }
     static var icBasket: UIImage { .load(named: "ic_basket") }
@@ -39,6 +40,7 @@ enum ImageLiterals {
     static var icRecordSort: UIImage { .load(named: "ic_record_sort") }
     static var icRecordedWillFill: UIImage { .load(named: "ic_recorded_will_fill") }
     static var icRecordedWill: UIImage { .load(named: "ic_recorded_will") }
+    static var icTextBubble: UIImage { .load(named: "ic_text_bubble") }
     static var icVisible: UIImage { .load(named: "ic_visible") }
     static var imgLandingPage1: UIImage { .load(named: "img_LandingPage_1") }
     static var imgLandingPage2: UIImage { .load(named: "img_LandingPage_2") }
