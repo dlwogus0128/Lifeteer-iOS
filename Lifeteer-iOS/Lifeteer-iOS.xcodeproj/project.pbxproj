@@ -35,6 +35,7 @@
 		A3531E2029796FB30089F2F5 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E1F29796FB30089F2F5 /* CustomNavigationBar.swift */; };
 		A3531E2429798B370089F2F5 /* UserMenuMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E2329798B370089F2F5 /* UserMenuMainVC.swift */; };
 		A3531E2629799C2B0089F2F5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3531E2529799C2B0089F2F5 /* CustomButton.swift */; };
+		A36734F22A1B42ED001B4C76 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36734F12A1B42ED001B4C76 /* Config.swift */; };
 		A3E55BA229C8356C0000D85D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E55BA129C8356C0000D85D /* SignInVC.swift */; };
 		A3E55BA429C846290000D85D /* SignInKaKaoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E55BA329C846290000D85D /* SignInKaKaoDetailVC.swift */; };
 		A3F71017297905FB00705FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F71016297905FB00705FBF /* AppDelegate.swift */; };
@@ -115,6 +116,7 @@
 		A3531E1F29796FB30089F2F5 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		A3531E2329798B370089F2F5 /* UserMenuMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuMainVC.swift; sourceTree = "<group>"; };
 		A3531E2529799C2B0089F2F5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A36734F12A1B42ED001B4C76 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		A3E55BA129C8356C0000D85D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		A3E55BA329C846290000D85D /* SignInKaKaoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInKaKaoDetailVC.swift; sourceTree = "<group>"; };
 		A3F71013297905FB00705FBF /* Lifeteer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lifeteer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -391,6 +393,7 @@
 		A3F7104A2979075B00705FBF /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				A36734F12A1B42ED001B4C76 /* Config.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				A3F7109C29790B0100705FBF /* UIStackView+.swift in Sources */,
 				A3F7109D29790B0100705FBF /* UIView+.swift in Sources */,
 				A3F710CF29790B3800705FBF /* makeVibrate.swift in Sources */,
+				A36734F22A1B42ED001B4C76 /* Config.swift in Sources */,
 				A3F710D629790B3800705FBF /* JsonCoder.swift in Sources */,
 				A3531E2429798B370089F2F5 /* UserMenuMainVC.swift in Sources */,
 			);
