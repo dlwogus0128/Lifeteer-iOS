@@ -63,7 +63,28 @@ final class WritingDiaryVC: UIViewController, FSCalendarDelegate, FSCalendarData
         $0.font = .b3
         $0.textColor = .disabledText
     }
+    
+    private let todayDiaryLabel = UILabel().then {
+        $0.textColor = .mainBlack
+        $0.font = .h1
+        $0.text = "오늘의 일기"
+    }
 
+    private let emotionStatusLabel = UILabel().then {
+        $0.textColor = .mainBlack
+        $0.font = .b2
+        $0.text = "감정상태"
+    }
+    
+    private let emotionTextLabel = UILabel().then {
+        $0.textColor = .disabledText
+        $0.font = .b3
+        $0.text = "기분을 선택해주세요."
+    }
+    
+    
+    private let emotionLine = UIView()
+    
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
@@ -174,6 +195,7 @@ extension WritingDiaryVC {
         }
         
         setDiaryTitleLayout()
+        setEmotionStatusLayout()
     }
     
     private func setDiaryTitleLayout() {
@@ -198,6 +220,20 @@ extension WritingDiaryVC {
         titleCountByteLabel.snp.makeConstraints { make in
             make.top.equalTo(diaryTitleLine.snp.bottom).offset(10)
             make.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+    }
+    
+    private func setEmotionStatusLayout() {
+        contentScrollView.addSubviews(todayDiaryLabel, emotionStatusLabel)
+        
+        todayDiaryLabel.snp.makeConstraints { make in
+            make.top.equalTo(diaryTitleLabel.snp.bottom).offset(126)
+            make.leading.equalTo(diaryTitleLabel)
+        }
+        
+        emotionStatusLabel.snp.makeConstraints { make in
+            make.top.equalTo(todayDiaryLabel.snp.bottom).offset(20)
+            make.leading.equalTo(diaryTitleLabel)
         }
     }
 }
